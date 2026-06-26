@@ -1,0 +1,26 @@
+site_name: AI Engineering Bootcamp
+site_description: From Backend Developer to AI Solution Architect
+theme:
+  name: material
+  language: fr
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Accueil: index.md
+  - Architecture:
+      - Vue d'ensemble: architecture/overview.md
+  - Glossaire:
+      - Glossaire: glossary/glossary.md
+  - Décisions:
+      - ADR Index: decisions/index.md
+  - Marché:
+      - Vue d'ensemble: market/overview.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
