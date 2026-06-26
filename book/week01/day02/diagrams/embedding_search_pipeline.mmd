@@ -1,0 +1,8 @@
+graph TD
+    A[Documents] --> B[Chunking]
+    B --> C[Embedding Model]
+    C --> D[Vector Database]
+    E[User Query] --> F[Query Embedding]
+    F --> D
+    D --> G[Top-K Results]
+    G --> H[LLM or Agent]
