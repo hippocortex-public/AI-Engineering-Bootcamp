@@ -10,4 +10,4 @@ jobs:
   smoke:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "GitHub Actions works"
+      - run: echo "GitHub Actions works ?"
