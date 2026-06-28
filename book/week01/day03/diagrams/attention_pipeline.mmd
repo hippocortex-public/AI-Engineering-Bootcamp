@@ -1,0 +1,11 @@
+flowchart LR
+    X[Input sequence] --> Q[Queries]
+    X --> K[Keys]
+    X --> V[Values]
+    Q --> S[Q x K transpose]
+    K --> S
+    S --> Scale[Divide by sqrt d_k]
+    Scale --> Softmax[Softmax]
+    Softmax --> O[Weights x Values]
+    V --> O
+    O --> Y[Attention output]

@@ -1,0 +1,12 @@
+flowchart TD
+    A[Besoin métier] --> B[Définir la tâche]
+    B --> C[Identifier entrée et sortie]
+    C --> D[Écrire prompt template]
+    D --> E[Créer cas de test]
+    E --> F[Exécuter modèle ou simulateur]
+    F --> G[Valider format et contenu]
+    G --> H{Résultat acceptable ?}
+    H -- Non --> I[Réviser prompt]
+    I --> D
+    H -- Oui --> J[Versionner prompt]
+    J --> K[Intégrer application]

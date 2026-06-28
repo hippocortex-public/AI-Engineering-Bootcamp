@@ -1,0 +1,10 @@
+flowchart LR
+    A[Application Python] --> B[LLMClient]
+    B --> C[LLMConfig]
+    B --> D{LLMTransport}
+    D --> E[MockTransport]
+    D --> F[StaticTransport]
+    D --> G[OpenAIResponsesTransport]
+    G --> H[Responses API]
+    B --> I[LLMResponse]
+    B --> J[Validation JSON]

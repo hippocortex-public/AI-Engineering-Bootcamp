@@ -1,0 +1,8 @@
+flowchart TD
+    A[Réponse modèle] --> B{JSON valide}
+    B -- Non --> X[Erreur ou retry]
+    B -- Oui --> C{Schéma valide}
+    C -- Non --> X
+    C -- Oui --> D{Règles métier}
+    D -- Non --> Y[Escalade ou refus]
+    D -- Oui --> Z[Utilisation]

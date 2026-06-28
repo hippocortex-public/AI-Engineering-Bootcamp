@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant User as Utilisateur
+    participant App as Application
+    participant LLM as Modèle
+    participant Tool as Outil
+
+    User->>App: Question avec besoin externe
+    App->>LLM: Entrée + outils disponibles
+    LLM-->>App: Tool call structuré
+    App->>App: Validation nom + arguments + permissions
+    App->>Tool: Exécution contrôlée
+    Tool-->>App: Résultat
+    App->>LLM: Résultat outil
+    LLM-->>App: Réponse finale
+    App-->>User: Réponse

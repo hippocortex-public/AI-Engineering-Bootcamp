@@ -1,0 +1,11 @@
+flowchart LR
+    U[Utilisateur] --> A[Application]
+    A --> R[Requête moderne]
+    R --> M[LLM]
+    M --> S[Structured Output]
+    M --> T[Tool Call]
+    S --> V[Validation]
+    T --> C[Contrôle applicatif]
+    C --> O[Outil métier]
+    O --> A
+    V --> A

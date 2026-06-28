@@ -1,0 +1,8 @@
+flowchart LR
+    A[Texte brut] --> B[Normalisation optionnelle]
+    B --> C[Pré-tokenisation]
+    C --> D[Merges BPE]
+    D --> E[Tokens]
+    E --> F[Token IDs]
+    F --> G[Embeddings]
+    G --> H[Transformer]

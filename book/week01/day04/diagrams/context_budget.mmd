@@ -1,0 +1,9 @@
+flowchart TB
+    A[Fenêtre de contexte] --> B[Instructions système]
+    A --> C[Historique]
+    A --> D[Documents récupérés]
+    A --> E[Question utilisateur]
+    A --> F[Budget de sortie]
+    D --> G{Budget dépassé ?}
+    G -->|Oui| H[Réduire / résumer / reranker]
+    G -->|Non| I[Appel modèle]

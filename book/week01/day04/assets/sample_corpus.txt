@@ -1,0 +1,5 @@
+ai engineering builds reliable systems
+ai engineers design context budgets
+language models process tokens
+tokens become embeddings
+context windows constrain architecture

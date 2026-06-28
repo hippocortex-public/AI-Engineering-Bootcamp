@@ -1,0 +1,36 @@
+{
+  "model": "example-modern-llm",
+  "instructions": "Classify the support ticket. Return only data matching the schema.",
+  "input": [
+    {
+      "role": "user",
+      "content": "Urgent production API timeout is blocking checkout."
+    }
+  ],
+  "response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "support_ticket_classification",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "required": ["category", "priority", "summary"],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": ["billing", "technical", "account", "other"]
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 12
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

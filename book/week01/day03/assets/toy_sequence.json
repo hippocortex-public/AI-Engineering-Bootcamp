@@ -1,0 +1,26 @@
+{
+  "sequence": [
+    "Le",
+    "modèle",
+    "lit",
+    "le",
+    "contexte"
+  ],
+  "note": "Toy sequence used to reason about self-attention relationships.",
+  "expected_focus_examples": [
+    {
+      "query_token": "lit",
+      "possible_relevant_tokens": [
+        "modèle",
+        "contexte"
+      ]
+    },
+    {
+      "query_token": "contexte",
+      "possible_relevant_tokens": [
+        "lit",
+        "modèle"
+      ]
+    }
+  ]
+}
