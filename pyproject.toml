@@ -29,6 +29,9 @@ docs = [
   "mkdocs-material>=9.5.0",
 ]
 
+[tool.setuptools]
+packages = ["mini_framework", "ai_platform"]
+
 [tool.ruff]
 line-length = 100
 target-version = "py311"
