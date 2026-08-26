@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant User
+    participant Manager
+    participant Router
+    participant Specialist
+    participant Reviewer
+
+    User->>Manager: Demande utilisateur
+    Manager->>Router: Classifier
+    Router-->>Manager: target_agent + confidence
+    alt Demande ambiguë
+        Manager-->>User: Question de clarification
+    else Demande routée
+        Manager->>Specialist: Sous-tâche structurée
+        Specialist-->>Manager: Résultat structuré
+        Manager->>Reviewer: Vérification
+        Reviewer-->>Manager: Validé ou rejeté
+        Manager-->>User: Réponse finale
+    end

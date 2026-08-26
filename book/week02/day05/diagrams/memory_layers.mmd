@@ -1,0 +1,11 @@
+flowchart TD
+    U[Message utilisateur] --> STM[Short-term memory<br/>historique récent borné]
+    U --> ST[Conversation state<br/>tâche active]
+    U --> EX[Memory extractor<br/>préférences explicites]
+    EX --> POL[Memory policy<br/>filtrage]
+    POL -->|autorisé| LTM[Long-term memory<br/>profil utilisateur]
+    POL -->|refusé| DROP[Ne pas persister]
+    STM --> CTX[Context builder]
+    ST --> CTX
+    LTM --> CTX
+    CTX --> A[Réponse agent]

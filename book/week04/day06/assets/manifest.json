@@ -1,0 +1,18 @@
+{
+  "week": 4,
+  "day": 6,
+  "title": "Observabilité",
+  "slug": "observabilite",
+  "module": "AI Framework Engineering",
+  "source_of_truth": "Markdown",
+  "notebooks": {
+    "student": "notebooks/week04/S4_J6_observabilite.ipynb",
+    "teacher": "notebooks/week04/teacher/S4_J6_observabilite_teacher.ipynb"
+  },
+  "mini_framework_files": [
+    "mini_framework/observability.py"
+  ],
+  "lab_tests": [
+    "book/week04/day06/labs/test_observability.py"
+  ]
+}

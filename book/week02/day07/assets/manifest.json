@@ -1,0 +1,31 @@
+{
+  "week": 2,
+  "day": 7,
+  "slug": "agent_autonome",
+  "title": "Agent autonome",
+  "theme": "AI Agent Development",
+  "source_of_truth": "Markdown",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "mandatory_corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "labs": [
+    "labs/autonomous_agent.py",
+    "labs/test_autonomous_agent.py"
+  ],
+  "notebooks": [
+    "notebooks/week02/S2_J7_agent_autonome.ipynb",
+    "notebooks/week02/teacher/S2_J7_agent_autonome_teacher.ipynb"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "title": "Mini-framework d'agents IA",
+  "objective": "Créer un socle testable pour exécuter des agents avec outils, mémoire, workflow et traces.",
+  "components": [
+    {
+      "name": "application",
+      "responsibility": "Expose le cas d'usage au produit.",
+      "interfaces": [
+        "run_use_case"
+      ],
+      "depends_on": [
+        "runner"
+      ],
+      "risks": [
+        "couplage métier-framework"
+      ]
+    },
+    {
+      "name": "runner",
+      "responsibility": "Orchestre l'exécution agentique.",
+      "interfaces": [
+        "run"
+      ],
+      "depends_on": [
+        "agent_definition",
+        "model_client",
+        "tool_registry",
+        "memory_store",
+        "workflow_engine",
+        "observability",
+        "guardrails"
+      ],
+      "risks": [
+        "classe trop grosse"
+      ]
+    },
+    {
+      "name": "agent_definition",
+      "responsibility": "Décrit l'agent sans l'exécuter.",
+      "interfaces": [
+        "describe"
+      ],
+      "depends_on": [],
+      "risks": [
+        "prompt non versionné"
+      ]
+    },
+    {
+      "name": "model_client",
+      "responsibility": "Encapsule le fournisseur de modèle.",
+      "interfaces": [
+        "generate"
+      ],
+      "depends_on": [],
+      "risks": [
+        "couplage fournisseur"
+      ]
+    },
+    {
+      "name": "tool_registry",
+      "responsibility": "Déclare et valide les outils.",
+      "interfaces": [
+        "register",
+        "call"
+      ],
+      "depends_on": [],
+      "risks": [
+        "outil sensible mal marqué"
+      ]
+    },
+    {
+      "name": "memory_store",
+      "responsibility": "Isole l'état et la mémoire.",
+      "interfaces": [
+        "load",
+        "save"
+      ],
+      "depends_on": [],
+      "risks": [
+        "fuite de données"
+      ]
+    },
+    {
+      "name": "workflow_engine",
+      "responsibility": "Contrôle transitions et arrêt.",
+      "interfaces": [
+        "next_step"
+      ],
+      "depends_on": [],
+      "risks": [
+        "boucles infinies"
+      ]
+    },
+    {
+      "name": "observability",
+      "responsibility": "Capture traces et métriques.",
+      "interfaces": [
+        "record"
+      ],
+      "depends_on": [],
+      "risks": [
+        "données sensibles en logs"
+      ]
+    },
+    {
+      "name": "guardrails",
+      "responsibility": "Contrôle entrées, sorties et outils.",
+      "interfaces": [
+        "check"
+      ],
+      "depends_on": [],
+      "risks": [
+        "blocage trop large"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "ADR-001",
+      "decision": "Séparer AgentDefinition et Runner.",
+      "reason": "Garder l'agent déclaratif et testable.",
+      "tradeoff": "Contrat plus explicite à maintenir."
+    },
+    {
+      "id": "ADR-002",
+      "decision": "Encapsuler le fournisseur modèle derrière ModelClient.",
+      "reason": "Permettre tests et remplacement fournisseur.",
+      "tradeoff": "Couche d'adaptation supplémentaire."
+    }
+  ],
+  "invariants": [
+    "Les composants spécialisés ne dépendent pas du runner.",
+    "Le runner orchestre sans logique métier spécifique.",
+    "Les traces ne modifient jamais l'état métier."
+  ]
+}

@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant U as User
+    participant C as Coordinator
+    participant R as Router
+    participant E as Engineering Agent
+    participant S as Support Agent
+    participant V as Reviewer
+    participant Y as Synthesizer
+
+    U->>C: Submit task
+    C->>R: Select agents
+    R-->>C: engineering_agent, support_agent
+    C->>E: Minimal technical context
+    E-->>C: status=resolved
+    C->>S: Minimal customer context
+    S-->>C: status=unresolved
+    C->>C: Detect conflict
+    C->>V: Review conflict
+    V-->>C: Needs clarification
+    C->>Y: Build final answer with uncertainty
+    Y-->>U: Response + next action

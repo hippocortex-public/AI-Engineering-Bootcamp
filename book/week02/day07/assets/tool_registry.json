@@ -1,0 +1,29 @@
+{
+  "tools": [
+    {
+      "name": "search_refund_policy",
+      "safe": true,
+      "description": "Récupère la politique de remboursement."
+    },
+    {
+      "name": "check_order",
+      "safe": true,
+      "description": "Vérifie une commande."
+    },
+    {
+      "name": "create_support_ticket",
+      "safe": true,
+      "description": "Crée un ticket support."
+    },
+    {
+      "name": "issue_refund",
+      "safe": false,
+      "description": "Déclenche un remboursement."
+    },
+    {
+      "name": "draft_response",
+      "safe": true,
+      "description": "Rédige une réponse finale."
+    }
+  ]
+}

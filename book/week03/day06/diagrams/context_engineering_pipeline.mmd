@@ -1,0 +1,12 @@
+flowchart TD
+    A[Demande utilisateur] --> B[Extraction objectif]
+    B --> C[Inventaire contexte]
+    C --> D[Filtre permissions]
+    D --> E[Filtre agent cible]
+    E --> F[Déduplication]
+    F --> G[Scoring priorité]
+    G --> H[Budget contexte]
+    H --> I[Réduction PII]
+    I --> J[Context Pack]
+    J --> K[Appel modèle]
+    J --> L[Trace audit]

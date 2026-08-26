@@ -1,0 +1,12 @@
+flowchart TD
+    U[Utilisateur] --> A[Application agentique]
+    A --> M[Modèle LLM]
+    M --> C{Sortie modèle}
+    C -->|Réponse texte| R[Réponse finale]
+    C -->|Tool call| V[Validation applicative]
+    V -->|Invalide| E[Erreur contrôlée]
+    V -->|Valide| T[Exécution outil]
+    T --> O[Résultat outil structuré]
+    O --> A
+    A --> M
+    M --> R

@@ -1,0 +1,56 @@
+{
+  "name": "support_resolution_workflow",
+  "version": "1.0.0",
+  "description": "Workflow déterministe pour résoudre une demande support.",
+  "steps": [
+    {
+      "name": "classify",
+      "handler": "classify_ticket",
+      "depends_on": [],
+      "max_retries": 0,
+      "sensitive": false,
+      "condition": null
+    },
+    {
+      "name": "enrich",
+      "handler": "enrich_context",
+      "depends_on": [
+        "classify"
+      ],
+      "max_retries": 0,
+      "sensitive": false,
+      "condition": null
+    },
+    {
+      "name": "plan",
+      "handler": "draft_resolution_plan",
+      "depends_on": [
+        "enrich"
+      ],
+      "max_retries": 1,
+      "sensitive": false,
+      "condition": null
+    },
+    {
+      "name": "refund",
+      "handler": "issue_refund",
+      "depends_on": [
+        "plan"
+      ],
+      "max_retries": 0,
+      "sensitive": true,
+      "condition": "is_refund_required"
+    },
+    {
+      "name": "final_answer",
+      "handler": "compose_final_answer",
+      "depends_on": [
+        "plan",
+        "refund"
+      ],
+      "max_retries": 0,
+      "sensitive": false,
+      "condition": null
+    }
+  ]
+}

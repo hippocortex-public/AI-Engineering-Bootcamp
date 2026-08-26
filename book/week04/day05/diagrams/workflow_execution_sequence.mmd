@@ -1,0 +1,24 @@
+sequenceDiagram
+    participant A as Agent
+    participant E as Workflow Engine
+    participant H as Handler
+    participant G as Approval Gate
+
+    A->>E: run(workflow, input)
+    E->>E: validate graph
+    E->>H: classify
+    H-->>E: classification
+    E->>H: enrich
+    H-->>E: context
+    E->>H: plan
+    H-->>E: plan
+    E->>E: evaluate condition
+    E->>G: approval required?
+    alt approved
+        E->>H: refund
+        H-->>E: refund result
+        E->>H: final_answer
+    else not approved
+        E-->>A: blocked
+    end
+    E-->>A: WorkflowRun + trace

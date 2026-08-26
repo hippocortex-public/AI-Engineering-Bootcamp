@@ -1,0 +1,34 @@
+{
+  "week": 4,
+  "day": 3,
+  "title": "Tool Registry",
+  "slug": "tool_registry",
+  "module": "AI Framework Engineering",
+  "source_of_truth": "Markdown",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "mandatory_directories": [
+    "corriges",
+    "diagrams",
+    "assets",
+    "labs"
+  ],
+  "notebooks": {
+    "student": "notebooks/week04/S4_J3_tool_registry.ipynb",
+    "teacher": "notebooks/week04/teacher/S4_J3_tool_registry_teacher.ipynb"
+  },
+  "lab_entrypoints": [
+    "book/week04/day03/labs/tool_registry_lab.py",
+    "book/week04/day03/labs/test_tool_registry.py"
+  ],
+  "framework_files": [
+    "mini_framework/tool_registry.py"
+  ]
+}

@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant C as Coordinator
+    participant T as Triage Agent
+    participant B as Backend Agent
+    participant S as Shared State Store
+    participant R as Reviewer Agent
+
+    C->>T: Assign incident triage
+    T->>S: write incident.summary expected_version=None
+    S-->>T: applied version=1
+    C->>B: Request backend diagnosis with snapshot
+    B->>S: write incident.root_cause expected_version=None
+    S-->>B: applied version=1
+    B->>S: write incident.summary expected_version=0
+    S-->>B: conflict current_version=1
+    C->>S: create_handoff(keys)
+    S-->>C: filtered context
+    C->>R: Review minimal handoff

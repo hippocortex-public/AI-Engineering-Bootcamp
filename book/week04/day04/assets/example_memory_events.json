@@ -1,0 +1,23 @@
+[
+  {
+    "event_type": "user_feedback",
+    "namespace": "user:42",
+    "owner_agent": "planner",
+    "event_text": "I prefer numbered steps for architecture reviews.",
+    "expected_promotion": "preference"
+  },
+  {
+    "event_type": "smalltalk",
+    "namespace": "user:42",
+    "owner_agent": "planner",
+    "event_text": "Thanks!",
+    "expected_promotion": null
+  },
+  {
+    "event_type": "verified_fact",
+    "namespace": "tenant:bootcamp",
+    "owner_agent": "researcher",
+    "event_text": "The project uses Markdown as the source of truth.",
+    "expected_promotion": "fact"
+  }
+]

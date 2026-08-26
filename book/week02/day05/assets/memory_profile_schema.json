@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MemoryProfile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "user_id",
+    "display_name",
+    "preferences",
+    "facts",
+    "updated_at"
+  ],
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "display_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      },
+      "properties": {
+        "language": {
+          "type": "string"
+        },
+        "answer_style": {
+          "type": "string"
+        },
+        "example_preference": {
+          "type": "string"
+        }
+      }
+    },
+    "facts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "updated_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "ISO 8601 timestamp of last profile update"
+    }
+  }
+}

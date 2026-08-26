@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentDefinition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "instructions",
+    "model"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{2,63}$"
+    },
+    "instructions": {
+      "type": "string",
+      "minLength": 10
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "max_input_chars": {
+      "type": "integer",
+      "minimum": 1
+    }
+  }
+}

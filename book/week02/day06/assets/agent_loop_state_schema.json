@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgentLoopState",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "goal",
+    "status",
+    "iterations",
+    "max_iterations",
+    "order_id",
+    "order_status",
+    "eta",
+    "final_answer",
+    "trace"
+  ],
+  "properties": {
+    "goal": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "running",
+        "completed",
+        "waiting_for_user",
+        "error",
+        "max_iterations_reached"
+      ]
+    },
+    "iterations": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "max_iterations": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "order_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "order_status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "eta": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "final_answer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "iteration",
+          "action",
+          "success"
+        ],
+        "properties": {
+          "iteration": {
+            "type": "integer"
+          },
+          "action": {
+            "type": "string"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "updated_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

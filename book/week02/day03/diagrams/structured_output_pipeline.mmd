@@ -1,0 +1,11 @@
+flowchart TD
+    A[Ticket utilisateur] --> B[Prompt de triage]
+    B --> C[Modèle / Adaptateur LLM]
+    C --> D[Sortie JSON brute]
+    D --> E[Parsing JSON]
+    E --> F[Validation du schéma]
+    F -->|valide| G[Mapping vers TriageDecision]
+    F -->|invalide| H[Erreur structurée]
+    G --> I[Règles métier]
+    I --> J[Réponse utilisateur séparée]
+    H --> K[Retry, fallback ou escalade humaine]

@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant U as Utilisateur
+    participant F as MiniAgentFramework
+    participant M as MemoryStore
+    participant W as WorkflowRunner
+    participant T as ToolRegistry
+    participant O as Observability
+
+    U->>F: run(user_id, message)
+    F->>O: run.started
+    F->>M: retrieve(user_id)
+    M-->>F: memory_used
+    F->>W: execute(workflow)
+    loop each step
+        W->>O: step.started
+        W->>T: call(tool, args)
+        T->>O: tool.call.started
+        T-->>W: ToolResult
+        W->>O: step.completed
+    end
+    W-->>F: outputs
+    F->>O: run.completed
+    F-->>U: RunResult

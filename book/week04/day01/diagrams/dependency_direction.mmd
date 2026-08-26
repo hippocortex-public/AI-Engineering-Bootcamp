@@ -1,0 +1,5 @@
+flowchart LR
+    App[Application Layer] --> Orchestration[Runner / WorkflowEngine]
+    Orchestration --> Ports[Ports: ModelClient, ToolRegistry, MemoryStore, Observability]
+    Ports --> Adapters[Adapters: OpenAI, MCP, Redis, Files, Logs]
+    Adapters -. must not import .-> Orchestration

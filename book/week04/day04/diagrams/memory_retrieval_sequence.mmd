@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant U as User
+    participant R as Runner
+    participant B as Context Builder
+    participant M as MemoryStore
+    participant L as LLM
+
+    U->>R: Request
+    R->>B: Build context
+    B->>M: retrieve(MemoryQuery)
+    M-->>B: filtered ranked records
+    B-->>R: context pack
+    R->>L: prompt + context pack
+    L-->>R: response
+    R->>M: promote_event(optional)
+    R-->>U: answer

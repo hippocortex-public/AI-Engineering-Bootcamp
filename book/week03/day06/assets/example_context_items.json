@@ -1,0 +1,22 @@
+[
+  {
+    "id": "system_support",
+    "kind": "system",
+    "content": "Tu es un agent support interne.",
+    "priority": 100,
+    "visibility": "public",
+    "source": "policy",
+    "target_agents": []
+  },
+  {
+    "id": "billing_policy",
+    "kind": "resource",
+    "content": "Ne jamais supprimer une facture sans validation humaine.",
+    "priority": 80,
+    "visibility": "shared",
+    "source": "mcp://billing/policy",
+    "target_agents": [
+      "billing_agent"
+    ]
+  }
+]

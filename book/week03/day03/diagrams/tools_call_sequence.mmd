@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant Agent as Agent
+    participant Client as Client MCP
+    participant Server as Serveur MCP
+    participant Tool as Handler Tool
+
+    Agent->>Client: Besoin d'une action
+    Client->>Server: tools/list
+    Server-->>Client: Tools disponibles
+    Agent->>Client: Sélectionne lookup_order
+    Client->>Server: tools/call lookup_order
+    Server->>Server: Valide arguments
+    Server->>Tool: Exécute handler
+    Tool-->>Server: Résultat métier
+    Server-->>Client: content + structuredContent
+    Client-->>Agent: Observation

@@ -1,0 +1,14 @@
+{
+  "principles": [
+    "Expose only the tools needed for the current agent role.",
+    "Validate arguments server-side before execution.",
+    "Block sensitive tools unless explicit approval is present.",
+    "Return normalized ToolResult objects instead of raw exceptions.",
+    "Trace lookup, policy, validation and execution steps."
+  ],
+  "statuses": {
+    "completed": "Tool executed successfully.",
+    "blocked": "Tool call refused by policy.",
+    "failed": "Tool call failed due to schema, unknown tool or handler exception."
+  }
+}

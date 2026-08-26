@@ -1,0 +1,16 @@
+flowchart TD
+    A[User Task] --> B[Normalize Task]
+    B --> C[Select Candidate Agents]
+    C --> D[Build Coordination Plan]
+    D --> E{Execution Strategy}
+    E -->|Parallel specialists| F[Run Specialists]
+    E -->|Sequential pipeline| G[Run Ordered Steps]
+    F --> H[Collect Observations]
+    G --> H
+    H --> I[Detect Conflicts]
+    I --> J{Review Required?}
+    J -->|Yes| K[Reviewer Agent]
+    J -->|No| L[Synthesizer]
+    K --> L
+    L --> M[Final Result]
+    M --> N[Trace JSON]

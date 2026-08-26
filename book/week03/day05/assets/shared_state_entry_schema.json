@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shared State Entry",
+  "type": "object",
+  "required": [
+    "key",
+    "value",
+    "version",
+    "owner",
+    "visibility",
+    "updated_by"
+  ],
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "value": {},
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "owner": {
+      "type": "string"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "private",
+        "shared",
+        "public"
+      ]
+    },
+    "updated_by": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

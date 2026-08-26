@@ -1,0 +1,13 @@
+flowchart TD
+    App[Application] --> Runner[Runner]
+    Runner --> Agent[AgentDefinition]
+    Runner --> Model[ModelClient]
+    Runner --> Tools[ToolRegistry]
+    Runner --> Memory[MemoryStore]
+    Runner --> Workflow[WorkflowEngine]
+    Runner --> Obs[Observability]
+    Runner --> Guardrails[Guardrails]
+    Tools --> ToolSpec[ToolSpec]
+    Memory --> State[StateSnapshot]
+    Workflow --> Policy[ExecutionPolicy]
+    Obs --> Trace[TraceEvent]

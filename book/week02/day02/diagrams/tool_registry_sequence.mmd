@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant User as Utilisateur
+    participant Agent as SupportAgent
+    participant Planner as Modèle / Planner
+    participant Registry as ToolRegistry
+    participant Tool as Fonction métier
+
+    User->>Agent: Message utilisateur
+    Agent->>Registry: list_schemas()
+    Registry-->>Agent: Schémas d'outils
+    Agent->>Planner: plan(message, schemas)
+    Planner-->>Agent: ToolCall(name, arguments)
+    Agent->>Registry: validate(call)
+    Registry-->>Agent: OK ou erreur
+    Agent->>Registry: dispatch(call)
+    Registry->>Tool: handler(**arguments)
+    Tool-->>Registry: data
+    Registry-->>Agent: résultat structuré + trace
+    Agent-->>User: réponse finale

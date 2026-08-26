@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant U as User
+    participant A as Agent
+    participant CE as ContextEngineer
+    participant S as Shared State
+    participant M as Memory Store
+    participant MCP as MCP Client
+    participant LLM as Model
+
+    U->>A: demande
+    A->>CE: build(goal, policy)
+    CE->>S: read task state
+    CE->>M: fetch relevant memory
+    CE->>MCP: list/read resources
+    CE->>CE: filter, dedupe, rank, budget
+    CE-->>A: context pack
+    A->>LLM: prompt + context pack
+    LLM-->>A: answer or tool call
+    A->>CE: write audit trace

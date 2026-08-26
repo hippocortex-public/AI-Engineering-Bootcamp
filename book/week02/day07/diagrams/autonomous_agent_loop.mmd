@@ -1,0 +1,14 @@
+flowchart TD
+    A[Objectif utilisateur] --> B[Validation de l'objectif]
+    B --> C{Informations suffisantes ?}
+    C -- Non --> D[Statut needs_input]
+    C -- Oui --> E[Création du plan]
+    E --> F[Prochaine tâche pending]
+    F --> G{Garde-fou OK ?}
+    G -- Non --> H[Stop / approval / needs_input]
+    G -- Oui --> I[Appel outil]
+    I --> J[Observation]
+    J --> K[Mise à jour état]
+    K --> L{Tâches restantes ?}
+    L -- Oui --> F
+    L -- Non --> M[Réponse finale]

@@ -1,0 +1,33 @@
+{
+  "week": 3,
+  "day": 5,
+  "title": "Sharing State",
+  "slug": "sharing_state",
+  "type": "complete_training_day",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md",
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md",
+    "labs/README.md",
+    "labs/shared_state_store.py",
+    "labs/test_shared_state_store.py"
+  ],
+  "notebooks": [
+    "notebooks/week03/S3_J5_sharing_state.ipynb",
+    "notebooks/week03/teacher/S3_J5_sharing_state_teacher.ipynb"
+  ],
+  "diagrams": [
+    "diagrams/shared_state_architecture.mmd",
+    "diagrams/handoff_state_sequence.mmd"
+  ],
+  "learning_goal": "Concevoir un état partagé versionné, filtré et observable pour workflows multi-agents.",
+  "status": "generated"
+}

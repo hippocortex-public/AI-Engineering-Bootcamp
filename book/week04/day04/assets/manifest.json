@@ -1,0 +1,31 @@
+{
+  "week": 4,
+  "day": 4,
+  "slug": "memory_layer",
+  "title": "Memory Layer",
+  "status": "complete",
+  "source_of_truth": "Markdown",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md",
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md",
+    "labs/README.md",
+    "labs/memory_layer_lab.py",
+    "labs/test_memory_layer.py"
+  ],
+  "notebooks": [
+    "notebooks/week04/S4_J4_memory_layer.ipynb",
+    "notebooks/week04/teacher/S4_J4_memory_layer_teacher.ipynb"
+  ],
+  "mini_framework_modules": [
+    "mini_framework/memory.py"
+  ]
+}

@@ -1,0 +1,13 @@
+flowchart LR
+    U[Utilisateur] --> A[Agent]
+    A --> R[Tool Registry]
+    R --> C[MCP Client]
+    C --> V[Validation locale]
+    V --> T[Transport JSON-RPC]
+    T --> S[MCP Server]
+    S --> Tools[Tools métier]
+    Tools --> S
+    S --> T
+    T --> C
+    C --> Tr[Trace]
+    C --> A

@@ -1,0 +1,35 @@
+{
+  "week": 4,
+  "day": 1,
+  "slug": "architecture",
+  "title": "Architecture d'un mini-framework d'agents",
+  "status": "complete",
+  "source_of_truth": "Markdown",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "mandatory_corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "notebooks": [
+    "notebooks/week04/S4_J1_architecture.ipynb",
+    "notebooks/week04/teacher/S4_J1_architecture_teacher.ipynb"
+  ],
+  "labs": [
+    "book/week04/day01/labs/mini_framework_architecture.py",
+    "book/week04/day01/labs/test_mini_framework_architecture.py"
+  ],
+  "framework_files": [
+    "mini_framework/__init__.py",
+    "mini_framework/architecture.py"
+  ]
+}

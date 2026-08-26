@@ -1,0 +1,33 @@
+{
+  "week": 2,
+  "day": 4,
+  "title": "Conversation State",
+  "slug": "conversation_state",
+  "source_of_truth": "Markdown",
+  "student_notebook": "notebooks/week02/S2_J4_conversation_state.ipynb",
+  "teacher_notebook": "notebooks/week02/teacher/S2_J4_conversation_state_teacher.ipynb",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "mandatory_corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "labs": [
+    "labs/README.md",
+    "labs/conversation_state_agent.py",
+    "labs/test_conversation_state_agent.py"
+  ],
+  "diagrams": [
+    "diagrams/conversation_state_lifecycle.mmd",
+    "diagrams/stateful_agent_sequence.mmd"
+  ]
+}

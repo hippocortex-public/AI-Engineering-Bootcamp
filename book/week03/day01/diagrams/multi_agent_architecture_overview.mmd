@@ -1,0 +1,13 @@
+flowchart TD
+    U[Utilisateur] --> R[Router / Triage Agent]
+    R -->|billing| B[Billing Specialist]
+    R -->|technical| T[Technical Specialist]
+    R -->|refund| F[Refund Specialist]
+    R -->|product| P[Product Specialist]
+    R -->|ambiguous| C[Clarification utilisateur]
+    B --> V[Reviewer Agent]
+    T --> V
+    F --> V
+    P --> V
+    V --> M[Manager]
+    M --> A[Réponse finale]

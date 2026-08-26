@@ -1,0 +1,54 @@
+{
+  "agents": [
+    {
+      "name": "triage",
+      "role": "Router",
+      "responsibility": "Classify tickets",
+      "allowed_tools": [],
+      "can_handoff": true
+    },
+    {
+      "name": "billing",
+      "role": "Billing Specialist",
+      "responsibility": "Handle invoices and payments",
+      "allowed_tools": [
+        "get_invoice"
+      ]
+    },
+    {
+      "name": "technical",
+      "role": "Technical Specialist",
+      "responsibility": "Handle bugs and incidents",
+      "allowed_tools": [
+        "get_logs"
+      ]
+    },
+    {
+      "name": "reviewer",
+      "role": "Reviewer",
+      "responsibility": "Validate final answer",
+      "allowed_tools": []
+    }
+  ],
+  "routing_policy": {
+    "fallback": "ask_clarification"
+  },
+  "shared_state_policy": {
+    "always_shared": [
+      "current_message",
+      "routing_decision",
+      "trace"
+    ],
+    "never_shared": [
+      "internal_reasoning",
+      "system_secrets"
+    ]
+  },
+  "trace_policy": [
+    "step",
+    "agent",
+    "action",
+    "status",
+    "detail"
+  ]
+}

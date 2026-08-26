@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContextPolicy",
+  "type": "object",
+  "required": [
+    "max_tokens",
+    "allowed_visibilities",
+    "include_kinds"
+  ],
+  "properties": {
+    "max_tokens": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "allowed_visibilities": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "private",
+          "shared",
+          "public"
+        ]
+      }
+    },
+    "include_kinds": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "system",
+          "goal",
+          "state",
+          "recent_message",
+          "memory",
+          "resource",
+          "tool",
+          "trace"
+        ]
+      }
+    },
+    "min_priority": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "redact_sensitive_data": {
+      "type": "boolean"
+    },
+    "agent_name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "task_id": "task-billing-001",
+    "objective": "Prepare a customer response about a duplicated invoice.",
+    "domains": [
+      "support",
+      "billing"
+    ],
+    "risk_level": "medium",
+    "constraints": [
+      "Do not promise refund before validation."
+    ]
+  },
+  {
+    "task_id": "task-security-001",
+    "objective": "Analyze a bug that may have exposed customer data.",
+    "domains": [
+      "engineering",
+      "security",
+      "support"
+    ],
+    "risk_level": "high",
+    "constraints": [
+      "Escalate sensitive data exposure."
+    ]
+  },
+  {
+    "task_id": "task-product-001",
+    "objective": "Summarize product feedback for roadmap planning.",
+    "domains": [
+      "product"
+    ],
+    "risk_level": "low",
+    "constraints": [
+      "Keep uncertainty visible."
+    ]
+  }
+]

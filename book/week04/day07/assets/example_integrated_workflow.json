@@ -1,0 +1,36 @@
+{
+  "name": "support_resolution",
+  "steps": [
+    {
+      "name": "classify",
+      "agent": "support_agent",
+      "tool": "classify_ticket",
+      "depends_on": []
+    },
+    {
+      "name": "search_policy",
+      "agent": "support_agent",
+      "tool": "search_kb",
+      "depends_on": [
+        "classify"
+      ]
+    },
+    {
+      "name": "draft",
+      "agent": "support_agent",
+      "tool": "draft_answer",
+      "depends_on": [
+        "search_policy"
+      ]
+    },
+    {
+      "name": "refund",
+      "agent": "support_agent",
+      "tool": "issue_refund",
+      "depends_on": [
+        "draft"
+      ],
+      "sensitive": true
+    }
+  ]
+}

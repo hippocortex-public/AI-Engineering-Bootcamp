@@ -1,0 +1,34 @@
+{
+  "week": 3,
+  "day": 3,
+  "title": "MCP Server",
+  "slug": "mcp_server",
+  "status": "complete",
+  "source_of_truth": "Markdown",
+  "student_notebook": "notebooks/week03/S3_J3_mcp_server.ipynb",
+  "teacher_notebook": "notebooks/week03/teacher/S3_J3_mcp_server_teacher.ipynb",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md",
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md",
+    "labs/README.md",
+    "labs/mcp_server.py",
+    "labs/test_mcp_server.py"
+  ],
+  "quality_checks": [
+    "roadmap_compliance",
+    "repository_structure_compliance",
+    "content_standard_compliance",
+    "lab_executable",
+    "student_notebook_created",
+    "teacher_notebook_created"
+  ]
+}

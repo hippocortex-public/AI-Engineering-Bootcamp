@@ -1,0 +1,8 @@
+flowchart LR
+    Agent[Agent IA] --> MCPClient[Client MCP]
+    MCPClient --> MCPServer[Serveur MCP]
+    MCPServer --> ToolRegistry[Tool Registry]
+    MCPServer --> ResourceStore[Resources]
+    MCPServer --> PromptRegistry[Prompts]
+    ToolRegistry --> BusinessSystems[Systèmes métier]
+    MCPServer --> TraceLog[Trace Log]

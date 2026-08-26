@@ -1,0 +1,80 @@
+{
+  "tools": [
+    {
+      "name": "get_order_status",
+      "description": "Récupère le statut logistique d'une commande client.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string",
+            "description": "Identifiant de commande, par exemple ORD-1001."
+          }
+        },
+        "required": [
+          "order_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "estimate_refund",
+      "description": "Estime le remboursement potentiel d'une commande selon une raison déclarée.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string",
+            "description": "Identifiant de commande, par exemple ORD-1001."
+          },
+          "reason": {
+            "type": "string",
+            "enum": [
+              "damaged",
+              "late_delivery",
+              "changed_mind"
+            ],
+            "description": "Motif de remboursement."
+          }
+        },
+        "required": [
+          "order_id",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "create_support_ticket",
+      "description": "Crée un ticket de support pour une commande existante.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string",
+            "description": "Identifiant de commande, par exemple ORD-1001."
+          },
+          "issue": {
+            "type": "string",
+            "description": "Résumé court du problème client."
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "low",
+              "normal",
+              "high"
+            ],
+            "description": "Priorité du ticket."
+          }
+        },
+        "required": [
+          "order_id",
+          "issue",
+          "priority"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

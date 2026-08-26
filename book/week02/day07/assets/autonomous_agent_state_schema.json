@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AutonomousAgentState",
+  "type": "object",
+  "required": [
+    "user_id",
+    "objective",
+    "status",
+    "tasks",
+    "current_step",
+    "budget_used",
+    "max_budget",
+    "traces"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "user_id": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "running",
+        "needs_input",
+        "completed",
+        "stopped",
+        "failed"
+      ]
+    },
+    "tasks": {
+      "type": "array"
+    },
+    "current_step": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "budget_used": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "max_budget": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "missing_inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "final_answer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "traces": {
+      "type": "array"
+    }
+  }
+}

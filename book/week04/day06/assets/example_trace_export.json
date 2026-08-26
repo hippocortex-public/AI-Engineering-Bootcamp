@@ -1,0 +1,40 @@
+{
+  "service_name": "mini_framework",
+  "traces": [
+    {
+      "trace_id": "trace_example",
+      "name": "support_agent_run",
+      "status": "completed"
+    }
+  ],
+  "spans": [
+    {
+      "trace_id": "trace_example",
+      "span_id": "span_tool",
+      "parent_id": "span_agent",
+      "name": "tool.search_ticket",
+      "kind": "tool",
+      "status": "completed",
+      "duration_ms": 12.4,
+      "attributes": {
+        "email": "[REDACTED]",
+        "ticket_id": "TCK-1001"
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "tool_arguments_validated",
+      "level": "info",
+      "attributes": {}
+    }
+  ],
+  "metrics": [
+    {
+      "name": "tool.call.count",
+      "value": 1,
+      "unit": "count",
+      "attributes": {}
+    }
+  ]
+}

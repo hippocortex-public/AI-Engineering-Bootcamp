@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MultiAgentProjectResult",
+  "type": "object",
+  "required": [
+    "status",
+    "objective",
+    "artifacts",
+    "review",
+    "trace"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "needs_revision",
+        "needs_clarification",
+        "blocked_by_policy"
+      ]
+    },
+    "objective": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "kind",
+          "created_by",
+          "content"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "content": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "score",
+        "verdict",
+        "comments"
+      ],
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "verdict": {
+          "type": "string"
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "trace": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false
+}

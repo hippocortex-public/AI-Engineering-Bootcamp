@@ -1,0 +1,12 @@
+flowchart TD
+    User[Utilisateur] --> Facade[MiniAgentFramework]
+    Facade --> Agents[AgentCatalog]
+    Facade --> Memory[MemoryStore]
+    Facade --> Workflow[WorkflowRunner]
+    Workflow --> Registry[ToolRegistry]
+    Registry --> Tools[Handlers Python]
+    Facade --> Tracer[Tracer]
+    Registry --> Tracer
+    Workflow --> Tracer
+    Memory --> Tracer
+    Facade --> Result[RunResult JSON]

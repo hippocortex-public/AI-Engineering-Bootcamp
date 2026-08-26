@@ -1,0 +1,26 @@
+{
+  "name": "Assistant multi-agent de livraison technique",
+  "objective": "Préparer une architecture multi-agent avec MCP, état partagé, contexte contrôlé, sécurité et revue finale.",
+  "constraints": [
+    "pas d'appel API externe",
+    "état partagé versionné",
+    "outils validés par schéma",
+    "actions sensibles soumises à approbation",
+    "sortie finale sérialisable"
+  ],
+  "agents": [
+    "planner",
+    "researcher",
+    "engineer",
+    "security",
+    "reviewer"
+  ],
+  "expected_artifacts": [
+    "delivery_plan",
+    "research_notes",
+    "architecture_proposal",
+    "test_plan",
+    "security_review",
+    "final_review"
+  ]
+}

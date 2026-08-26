@@ -1,0 +1,27 @@
+sequenceDiagram
+    participant User as Utilisateur
+    participant Agent as Agent
+    participant Model as Modèle
+    participant Parser as JSON Parser
+    participant Validator as Schema Validator
+    participant App as Backend métier
+
+    User->>Agent: Ticket support en langage naturel
+    Agent->>Model: Demande de sortie structurée
+    Model-->>Agent: JSON brut
+    Agent->>Parser: json.loads(raw_output)
+
+    alt JSON invalide
+        Parser-->>Agent: Erreur de parsing
+        Agent-->>App: Rejet + journalisation
+    else JSON valide
+        Parser-->>Validator: Dict Python
+        Validator->>Validator: types, required, enums, bornes
+        alt Schéma invalide
+            Validator-->>Agent: StructuredOutputError
+            Agent-->>App: Retry ou fallback
+        else Schéma valide
+            Validator-->>Agent: Donnée conforme
+            Agent->>App: TriageDecision
+        end
+    end

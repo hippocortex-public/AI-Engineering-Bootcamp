@@ -1,0 +1,37 @@
+{
+  "week": 2,
+  "day": 3,
+  "slug": "structured_outputs",
+  "title": "Structured Outputs",
+  "roadmap_track": "AI Agent Development",
+  "source_of_truth": "Markdown",
+  "student_notebook": "notebooks/week02/S2_J3_structured_outputs.ipynb",
+  "teacher_notebook": "notebooks/week02/teacher/S2_J3_structured_outputs_teacher.ipynb",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "mandatory_corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "labs": [
+    "labs/README.md",
+    "labs/structured_output_agent.py",
+    "labs/test_structured_output_agent.py"
+  ],
+  "diagrams": [
+    "diagrams/structured_output_pipeline.mmd",
+    "diagrams/schema_validation_flow.mmd"
+  ],
+  "assets": [
+    "assets/triage_output_schema.json"
+  ]
+}

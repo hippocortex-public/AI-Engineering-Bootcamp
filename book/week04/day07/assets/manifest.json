@@ -1,0 +1,30 @@
+{
+  "week": 4,
+  "day": 7,
+  "title": "Intégration du mini-framework d'agents",
+  "slug": "integration",
+  "source_of_truth": "Markdown",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "mandatory_corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "labs": [
+    "labs/integration_lab.py",
+    "labs/test_integration.py"
+  ],
+  "notebooks": [
+    "notebooks/week04/S4_J7_integration.ipynb",
+    "notebooks/week04/teacher/S4_J7_integration_teacher.ipynb"
+  ]
+}

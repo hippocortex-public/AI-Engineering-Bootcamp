@@ -1,0 +1,24 @@
+sequenceDiagram
+    participant User as Utilisateur
+    participant Agent as Agent autonome
+    participant State as AgentState
+    participant Registry as ToolRegistry
+    participant Human as Humain
+
+    User->>Agent: Objectif métier
+    Agent->>State: Initialise l'état
+    Agent->>State: Crée le plan
+    loop Jusqu'à arrêt
+        Agent->>State: Sélectionne prochaine tâche
+        Agent->>Agent: Vérifie budget, max_steps, approval
+        alt Action sensible sans approbation
+            Agent->>Human: Demande validation
+            Agent->>State: status = needs_input
+        else Action autorisée
+            Agent->>Registry: execute(tool, args)
+            Registry-->>Agent: observation
+            Agent->>State: Ajoute observation + trace
+        end
+    end
+    Agent->>State: Compose final_answer
+    Agent-->>User: Réponse finale

@@ -1,0 +1,10 @@
+flowchart TD
+    A[Agent / Workflow / Tool] --> B[Observability API]
+    B --> C[Trace Context]
+    C --> D[Spans]
+    C --> E[Events]
+    C --> F[Metrics]
+    B --> G[Redactor]
+    G --> H[JSON Export]
+    H --> I[Monitoring Backend Future]
+    H --> J[Debug Report]

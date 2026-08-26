@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MiniFrameworkArchitectureBlueprint",
+  "type": "object",
+  "required": [
+    "title",
+    "objective",
+    "components",
+    "decisions",
+    "invariants"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "responsibility",
+          "interfaces",
+          "depends_on"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "responsibility": {
+            "type": "string"
+          },
+          "interfaces": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "decisions": {
+      "type": "array"
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

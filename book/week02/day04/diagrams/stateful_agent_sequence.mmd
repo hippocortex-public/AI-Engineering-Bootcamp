@@ -1,0 +1,27 @@
+sequenceDiagram
+    autonumber
+    participant U as User
+    participant API as Backend API
+    participant Store as State Store
+    participant Extractor as Extractor or LLM
+    participant Policy as Action Policy
+    participant Tool as Business Tool
+
+    U->>API: user message
+    API->>Store: load(session_id)
+    Store-->>API: ConversationState
+    API->>Extractor: extract intent and slots
+    Extractor-->>API: structured extraction
+    API->>API: update state
+    API->>Policy: evaluate missing fields
+    alt missing fields
+        Policy-->>API: ask next question
+        API->>Store: save(updated state)
+        API-->>U: targeted question
+    else ready for action
+        Policy-->>API: action allowed
+        API->>Tool: call with validated slots
+        Tool-->>API: tool result
+        API->>Store: save(completed state)
+        API-->>U: confirmation
+    end

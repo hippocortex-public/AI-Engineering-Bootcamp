@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "required": [
+    "category",
+    "priority",
+    "sentiment",
+    "summary",
+    "action_required",
+    "next_action",
+    "confidence"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "category": {
+      "type": "string",
+      "enum": [
+        "billing",
+        "technical",
+        "account",
+        "shipping",
+        "other"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "sentiment": {
+      "type": "string",
+      "enum": [
+        "neutral",
+        "frustrated",
+        "angry",
+        "satisfied"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "action_required": {
+      "type": "boolean"
+    },
+    "next_action": {
+      "type": "object",
+      "required": [
+        "owner_team",
+        "rationale"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "owner_team": {
+          "type": "string",
+          "enum": [
+            "support_l1",
+            "billing_ops",
+            "technical_ops",
+            "account_ops"
+          ]
+        },
+        "rationale": {
+          "type": "string"
+        }
+      }
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

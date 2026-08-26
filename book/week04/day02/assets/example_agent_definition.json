@@ -1,0 +1,11 @@
+{
+  "name": "explainer",
+  "instructions": "Explique simplement les concepts AI Engineering avec un exemple concret.",
+  "model": "fake-model",
+  "metadata": {
+    "owner": "bootcamp",
+    "week": 4,
+    "day": 2
+  },
+  "max_input_chars": 2000
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "event_id": 1,
+    "agent": "coordinator",
+    "operation": "write",
+    "key": "objective",
+    "version": 1,
+    "status": "applied",
+    "reason": null
+  },
+  {
+    "event_id": 2,
+    "agent": "triage",
+    "operation": "patch",
+    "key": "incident.summary",
+    "version": 1,
+    "status": "applied",
+    "reason": null
+  },
+  {
+    "event_id": 3,
+    "agent": "backend",
+    "operation": "write",
+    "key": "plan.next_step",
+    "version": 2,
+    "status": "conflict",
+    "reason": "expected_version=1"
+  }
+]

@@ -1,0 +1,12 @@
+flowchart LR
+    C[Coordinator] -->|filtered task context| A1[Triage Agent]
+    C -->|filtered task context| A2[Backend Agent]
+    C -->|filtered task context| A3[Security Agent]
+    A1 -->|StatePatch| S[(Shared State Store)]
+    A2 -->|StatePatch| S
+    A3 -->|StatePatch| S
+    S -->|Snapshot private/shared/public filtered| A1
+    S -->|Snapshot private/shared/public filtered| A2
+    S -->|Snapshot private/shared/public filtered| A3
+    S --> L[Event Log]
+    S --> H[Minimal Handoff Context]

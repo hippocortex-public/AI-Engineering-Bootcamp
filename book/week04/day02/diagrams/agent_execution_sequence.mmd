@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant User
+    participant Agent
+    participant Guardrails
+    participant ModelClient
+    participant Result
+
+    User->>Agent: RunContext
+    Agent->>Guardrails: validate input and config
+    alt blocked
+        Guardrails-->>Agent: violation
+        Agent->>Result: blocked AgentResult
+    else valid
+        Agent->>Agent: build messages
+        Agent->>ModelClient: ModelRequest
+        ModelClient-->>Agent: ModelResponse
+        Agent->>Result: completed AgentResult
+    end

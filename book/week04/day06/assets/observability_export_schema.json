@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Observability Export",
+  "type": "object",
+  "required": [
+    "service_name",
+    "traces",
+    "spans",
+    "events",
+    "metrics"
+  ],
+  "properties": {
+    "service_name": {
+      "type": "string"
+    },
+    "traces": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "trace_id",
+          "name",
+          "status"
+        ],
+        "properties": {
+          "trace_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "running",
+              "completed",
+              "failed"
+            ]
+          }
+        }
+      }
+    },
+    "spans": {
+      "type": "array"
+    },
+    "events": {
+      "type": "array"
+    },
+    "metrics": {
+      "type": "array"
+    }
+  }
+}

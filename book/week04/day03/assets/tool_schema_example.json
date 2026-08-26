@@ -1,0 +1,33 @@
+{
+  "name": "create_ticket",
+  "description": "Crée un ticket de support après validation humaine.",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "Titre du ticket"
+      },
+      "priority": {
+        "type": "string",
+        "description": "Priorité métier",
+        "enum": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "default": "medium"
+      }
+    },
+    "required": [
+      "title"
+    ],
+    "additionalProperties": false
+  },
+  "sensitive": true,
+  "required_scope": "ticket:write",
+  "tags": [
+    "support",
+    "sensitive"
+  ]
+}

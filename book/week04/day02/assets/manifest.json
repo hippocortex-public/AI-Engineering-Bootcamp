@@ -1,0 +1,39 @@
+{
+  "week": 4,
+  "day": 2,
+  "title": "Abstraction Agent",
+  "slug": "abstraction_agent",
+  "source_of_truth": "Markdown",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md",
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "mandatory_directories": [
+    "corriges",
+    "diagrams",
+    "assets",
+    "labs"
+  ],
+  "labs": [
+    "labs/agent_abstraction.py",
+    "labs/test_agent_abstraction.py"
+  ],
+  "notebooks": [
+    "notebooks/week04/S4_J2_abstraction_agent.ipynb",
+    "notebooks/week04/teacher/S4_J2_abstraction_agent_teacher.ipynb"
+  ],
+  "quality": {
+    "code_executable": true,
+    "external_api_required": false,
+    "teacher_notebook_required": true
+  }
+}

@@ -1,0 +1,45 @@
+[
+  {
+    "jsonrpc": "2.0",
+    "id": "init-1",
+    "method": "initialize",
+    "params": {
+      "client": "bootcamp-test-client"
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": "tools-1",
+    "method": "tools/list"
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": "call-1",
+    "method": "tools/call",
+    "params": {
+      "name": "lookup_order",
+      "arguments": {
+        "order_id": "ORD-1001"
+      }
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": "resource-1",
+    "method": "resources/read",
+    "params": {
+      "uri": "kb://support/refunds"
+    }
+  },
+  {
+    "jsonrpc": "2.0",
+    "id": "prompt-1",
+    "method": "prompts/get",
+    "params": {
+      "name": "support_triage",
+      "arguments": {
+        "language": "fr"
+      }
+    }
+  }
+]

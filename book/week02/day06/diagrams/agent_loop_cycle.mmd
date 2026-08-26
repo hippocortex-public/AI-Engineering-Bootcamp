@@ -1,0 +1,16 @@
+flowchart TD
+    A[Goal utilisateur] --> B[Initialiser AgentState]
+    B --> C[Créer ou mettre à jour le plan]
+    C --> D[Choisir la prochaine action]
+    D --> E{Action valide ?}
+    E -- Non --> X[Status error]
+    E -- Oui --> F[Exécuter outil ou clarification]
+    F --> G[Créer Observation]
+    G --> H[Reducer: mettre à jour le state]
+    H --> I{Objectif atteint ?}
+    I -- Oui --> J[Status completed]
+    I -- Non --> K{Info utilisateur requise ?}
+    K -- Oui --> L[Status waiting_for_user]
+    K -- Non --> M{Max iterations atteint ?}
+    M -- Oui --> N[Status max_iterations_reached]
+    M -- Non --> C

@@ -1,0 +1,13 @@
+{
+  "week": 3,
+  "day": 6,
+  "slug": "context_engineering",
+  "title": "Context Engineering",
+  "roadmap_topic": "Context Engineering",
+  "source_of_truth": "Markdown",
+  "student_notebook": "notebooks/week03/S3_J6_context_engineering.ipynb",
+  "teacher_notebook": "notebooks/week03/teacher/S3_J6_context_engineering_teacher.ipynb",
+  "lab": "book/week03/day06/labs/context_engineering.py",
+  "tests": "book/week03/day06/labs/test_context_engineering.py",
+  "status": "complete"
+}

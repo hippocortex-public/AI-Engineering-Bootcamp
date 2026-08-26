@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant User
+    participant Agent
+    participant Obs as Observability
+    participant Tool
+    User->>Agent: Request
+    Agent->>Obs: start_trace(agent_run)
+    Agent->>Obs: start_span(classify)
+    Obs-->>Agent: span context
+    Agent->>Obs: end_span(completed)
+    Agent->>Obs: start_span(tool.search)
+    Agent->>Tool: call(arguments)
+    Tool-->>Agent: result
+    Agent->>Obs: event(tool_result_received)
+    Agent->>Obs: end_span(completed)
+    Agent->>Obs: metric(agent.run.duration_ms)
+    Agent->>Obs: end_trace(completed)
+    Agent-->>User: Response

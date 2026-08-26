@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant Agent
+    participant Client as MCP Client
+    participant Server as MCP Server
+
+    Agent->>Client: list_tools()
+    Client->>Server: tools/list
+    Server-->>Client: tool definitions
+    Client-->>Agent: local registry
+
+    Agent->>Client: call_tool(name, arguments)
+    Client->>Client: validate schema
+    Client->>Client: check policy
+    Client->>Server: tools/call
+    Server-->>Client: tool result
+    Client->>Client: record trace
+    Client-->>Agent: observation

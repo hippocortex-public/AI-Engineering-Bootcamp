@@ -1,0 +1,31 @@
+flowchart LR
+    User[Utilisateur] --> Coordinator[DeliveryCoordinator]
+
+    Coordinator --> Planner[Agent planner]
+    Coordinator --> Context[ContextBuilder]
+    Coordinator --> State[SharedStateStore]
+    Coordinator --> Tools[MCPToolAdapter]
+
+    Planner --> Plan[Plan de livraison]
+    Plan --> Researcher[Agent researcher]
+    Plan --> Engineer[Agent engineer]
+    Plan --> Security[Agent security]
+    Plan --> Reviewer[Agent reviewer]
+
+    Context --> Researcher
+    Context --> Engineer
+    Context --> Security
+    Context --> Reviewer
+
+    Tools --> KB[search_knowledge_base]
+    Tools --> Arch[generate_architecture]
+    Tools --> Tests[create_test_plan]
+    Tools --> Approval[request_human_approval]
+
+    Researcher --> State
+    Engineer --> State
+    Security --> State
+    Reviewer --> State
+
+    State --> Final[Rapport final]
+    Reviewer --> Final

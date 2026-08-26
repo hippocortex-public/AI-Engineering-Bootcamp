@@ -1,0 +1,18 @@
+{
+  "week": 2,
+  "day": 6,
+  "title": "Agent Loop & planification",
+  "slug": "agent_loop_planification",
+  "source_of_truth": "Markdown",
+  "student_notebook": "notebooks/week02/S2_J6_agent_loop_planification.ipynb",
+  "teacher_notebook": "notebooks/week02/teacher/S2_J6_agent_loop_planification_teacher.ipynb",
+  "labs": [
+    "book/week02/day06/labs/agent_loop_planner.py",
+    "book/week02/day06/labs/test_agent_loop_planner.py"
+  ],
+  "diagrams": [
+    "book/week02/day06/diagrams/agent_loop_cycle.mmd",
+    "book/week02/day06/diagrams/planning_replanning_sequence.mmd"
+  ],
+  "status": "complete"
+}

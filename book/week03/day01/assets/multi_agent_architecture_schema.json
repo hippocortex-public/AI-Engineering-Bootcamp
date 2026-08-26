@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MultiAgentArchitecture",
+  "type": "object",
+  "required": [
+    "agents",
+    "routing_policy",
+    "shared_state_policy",
+    "trace_policy"
+  ],
+  "properties": {
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "role",
+          "responsibility",
+          "allowed_tools"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "responsibility": {
+            "type": "string"
+          },
+          "allowed_tools": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "can_handoff": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "routing_policy": {
+      "type": "object"
+    },
+    "shared_state_policy": {
+      "type": "object"
+    },
+    "trace_policy": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

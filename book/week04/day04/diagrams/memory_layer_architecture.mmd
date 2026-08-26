@@ -1,0 +1,20 @@
+flowchart LR
+    Runner[Agent Runner] --> Builder[Context Builder]
+    Builder --> Query[MemoryQuery]
+    Query --> Store[MemoryStore]
+    Store --> Filter[Policy Filters]
+    Filter --> Rank[Ranking]
+    Rank --> Pack[Context Memory Pack]
+    Pack --> Model[Model Request]
+    Runner --> Promotion[Memory Promotion Policy]
+    Promotion --> Store
+
+    subgraph MemoryRecord
+        N[namespace]
+        K[kind]
+        V[visibility]
+        T[ttl]
+        I[importance]
+    end
+
+    Store --> MemoryRecord

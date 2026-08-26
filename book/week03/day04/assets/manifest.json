@@ -1,0 +1,31 @@
+{
+  "week": 3,
+  "day": 4,
+  "slug": "mcp_client",
+  "title": "MCP Client",
+  "roadmap_topic": "MCP Client",
+  "source_of_truth": "Markdown",
+  "student_notebook": "notebooks/week03/S3_J4_mcp_client.ipynb",
+  "teacher_notebook": "notebooks/week03/teacher/S3_J4_mcp_client_teacher.ipynb",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md",
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "labs": [
+    "labs/mcp_client.py",
+    "labs/test_mcp_client.py"
+  ],
+  "diagrams": [
+    "diagrams/mcp_client_architecture.mmd",
+    "diagrams/mcp_client_tool_call_sequence.mmd"
+  ]
+}

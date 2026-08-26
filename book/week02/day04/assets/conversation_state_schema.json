@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ConversationState",
+  "type": "object",
+  "required": [
+    "session_id",
+    "user_id",
+    "intent",
+    "slots",
+    "messages",
+    "tool_results",
+    "turn_count",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "user_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intent": {
+      "type": "string",
+      "enum": [
+        "unknown",
+        "order_status",
+        "refund",
+        "technical_issue"
+      ]
+    },
+    "slots": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "role",
+          "content"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tool_results": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object"
+      }
+    },
+    "turn_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "collecting",
+        "ready_for_action",
+        "completed",
+        "blocked"
+      ]
+    }
+  }
+}

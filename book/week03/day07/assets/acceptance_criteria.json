@@ -1,0 +1,27 @@
+{
+  "minimum_review_score": 0.8,
+  "required_agents": [
+    "planner",
+    "researcher",
+    "engineer",
+    "security",
+    "reviewer"
+  ],
+  "required_artifacts": [
+    "delivery_plan",
+    "research_notes",
+    "architecture_proposal",
+    "test_plan",
+    "security_review",
+    "final_review"
+  ],
+  "safety": {
+    "sensitive_tools_require_approval": true,
+    "allowed_statuses": [
+      "completed",
+      "needs_revision",
+      "needs_clarification",
+      "blocked_by_policy"
+    ]
+  }
+}

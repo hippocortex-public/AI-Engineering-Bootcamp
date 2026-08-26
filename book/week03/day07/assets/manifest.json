@@ -1,0 +1,30 @@
+{
+  "week": 3,
+  "day": 7,
+  "title": "Projet multi-agent",
+  "slug": "projet_multi_agent",
+  "source_of_truth": "Markdown",
+  "student_notebook": "notebooks/week03/S3_J7_projet_multi_agent.ipynb",
+  "teacher_notebook": "notebooks/week03/teacher/S3_J7_projet_multi_agent_teacher.ipynb",
+  "lab": {
+    "language": "python",
+    "entrypoint": "book/week03/day07/labs/multi_agent_project.py",
+    "tests": "book/week03/day07/labs/test_multi_agent_project.py",
+    "external_dependencies": []
+  },
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "mandatory_corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ]
+}

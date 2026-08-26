@@ -1,0 +1,28 @@
+sequenceDiagram
+    participant Agent
+    participant Registry as ToolRegistry
+    participant Policy
+    participant Validator
+    participant Handler
+    participant Trace
+
+    Agent->>Registry: call(name, args, context)
+    Registry->>Trace: registry.lookup
+    Registry->>Policy: enabled/scope/approval
+    alt blocked
+        Policy-->>Registry: refused
+        Registry-->>Agent: ToolResult(blocked)
+    else allowed
+        Policy-->>Registry: allowed
+        Registry->>Validator: validate(args, schema)
+        alt invalid
+            Validator-->>Registry: schema error
+            Registry-->>Agent: ToolResult(failed)
+        else valid
+            Validator-->>Registry: normalized args
+            Registry->>Handler: execute(args, context)
+            Handler-->>Registry: output
+            Registry->>Trace: tool.completed
+            Registry-->>Agent: ToolResult(completed)
+        end
+    end

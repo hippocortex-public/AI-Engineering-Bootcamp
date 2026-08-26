@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CoordinationPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "objective",
+    "selected_agents",
+    "execution_mode",
+    "requires_review",
+    "max_rounds"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "selected_agents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "execution_mode": {
+      "type": "string",
+      "enum": [
+        "parallel",
+        "sequential",
+        "handoff"
+      ]
+    },
+    "requires_review": {
+      "type": "boolean"
+    },
+    "max_rounds": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "review_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

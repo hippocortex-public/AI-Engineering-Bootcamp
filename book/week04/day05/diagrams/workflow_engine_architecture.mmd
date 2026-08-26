@@ -1,0 +1,11 @@
+flowchart TD
+    Agent[Agent] --> Engine[Workflow Engine]
+    Engine --> Definition[WorkflowDefinition]
+    Engine --> State[WorkflowState]
+    Engine --> Registry[Handler Registry]
+    Engine --> Trace[Trace Events]
+    Engine --> Approval[Human Approval Gate]
+    Registry --> Tools[Tool Registry]
+    Registry --> Memory[Memory Layer]
+    Registry --> Model[Model Client]
+    Engine --> Result[WorkflowRun]

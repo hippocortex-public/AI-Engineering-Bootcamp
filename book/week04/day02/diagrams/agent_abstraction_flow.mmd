@@ -1,0 +1,11 @@
+flowchart TD
+    A[RunContext] --> B[Agent.run]
+    B --> C{Guardrails}
+    C -->|blocked| D[AgentResult status=blocked]
+    C -->|ok| E[Build ModelRequest]
+    E --> F[ModelClient.complete]
+    F --> G[ModelResponse]
+    G --> H[AgentResult status=completed]
+    B --> I[Trace events]
+    I --> D
+    I --> H

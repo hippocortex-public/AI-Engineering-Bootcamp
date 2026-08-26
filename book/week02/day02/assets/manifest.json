@@ -1,0 +1,24 @@
+{
+  "deliverable": "Semaine 2 Jour 2 - Function Calling",
+  "paths": {
+    "day": "book/week02/day02",
+    "student_notebook": "notebooks/week02/S2_J2_function_calling.ipynb",
+    "teacher_notebook": "notebooks/week02/teacher/S2_J2_function_calling_teacher.ipynb"
+  },
+  "quality_checklist": {
+    "roadmap_compliance": true,
+    "repository_compliance": true,
+    "content_standard_compliance": true,
+    "style_guide_compliance": true,
+    "no_structural_changes": true,
+    "mandatory_correction_files_exist": true,
+    "student_notebook_exists": true,
+    "teacher_notebook_exists": true,
+    "code_executable": true,
+    "complete_artifact_set": true
+  },
+  "test_commands": [
+    "python book/week02/day02/labs/function_calling_agent.py",
+    "python book/week02/day02/labs/test_function_calling_agent.py"
+  ]
+}

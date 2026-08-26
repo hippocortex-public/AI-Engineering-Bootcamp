@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant User as Utilisateur
+    participant Agent as Agent
+    participant STM as ShortTermMemory
+    participant State as ConversationState
+    participant Extractor as MemoryExtractor
+    participant LTM as LongTermMemoryStore
+
+    User->>Agent: Message
+    Agent->>STM: add(user, message)
+    Agent->>State: update intent / slots / status
+    Agent->>Extractor: detect explicit stable preference
+    alt Information mémorisable
+        Extractor->>LTM: save preference or fact by user_id
+    else Information temporaire ou sensible
+        Extractor-->>Agent: do not persist
+    end
+    Agent->>STM: add(assistant, response)
+    Agent-->>User: Réponse contextualisée

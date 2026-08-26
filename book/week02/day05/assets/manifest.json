@@ -1,0 +1,38 @@
+{
+  "week": 2,
+  "day": 5,
+  "title": "Memory courte, longue et state",
+  "slug": "memory_state",
+  "roadmap_topic": "Memory (courte, longue, state)",
+  "source_of_truth": "Markdown",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "mandatory_directories": [
+    "corriges",
+    "diagrams",
+    "assets",
+    "labs"
+  ],
+  "mandatory_corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "notebooks": {
+    "student": "notebooks/week02/S2_J5_memory_state.ipynb",
+    "teacher": "notebooks/week02/teacher/S2_J5_memory_state_teacher.ipynb"
+  },
+  "lab": {
+    "main": "labs/memory_agent.py",
+    "tests": "labs/test_memory_agent.py",
+    "external_dependencies": []
+  }
+}

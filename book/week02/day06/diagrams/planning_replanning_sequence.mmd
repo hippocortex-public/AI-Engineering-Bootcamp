@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant U as User
+    participant A as AgentLoop
+    participant P as Planner
+    participant R as ToolRegistry
+    participant S as AgentState
+
+    U->>A: goal + message
+    A->>S: initialize
+    A->>P: create initial plan
+    P-->>A: plan steps
+    loop until done or max_iterations
+        A->>A: choose next action
+        alt missing required field
+            A->>S: status = waiting_for_user
+        else tool action
+            A->>R: execute(action)
+            R-->>A: observation
+            A->>S: reduce(action, observation)
+        end
+        A->>A: decide continue/replan/finish
+    end
+    A-->>U: final answer or controlled status

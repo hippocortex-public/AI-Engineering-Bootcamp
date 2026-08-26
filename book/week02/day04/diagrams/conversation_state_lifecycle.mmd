@@ -1,0 +1,19 @@
+stateDiagram-v2
+    [*] --> New
+    New --> Collecting: first_user_message
+    Collecting --> Collecting: partial_information
+    Collecting --> ReadyForAction: required_slots_complete
+    ReadyForAction --> Completed: action_executed
+    ReadyForAction --> Blocked: validation_or_policy_failure
+    Blocked --> Collecting: user_correction
+    Completed --> [*]
+
+    note right of Collecting
+      The agent asks one targeted
+      question for the next missing slot.
+    end note
+
+    note right of ReadyForAction
+      Business action is allowed only
+      after required fields are present.
+    end note

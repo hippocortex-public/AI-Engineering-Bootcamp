@@ -1,0 +1,37 @@
+sequenceDiagram
+    participant U as Utilisateur
+    participant C as Coordinator
+    participant P as Planner
+    participant CTX as ContextBuilder
+    participant MCP as MCPToolAdapter
+    participant R as Researcher
+    participant E as Engineer
+    participant S as Security
+    participant V as Reviewer
+    participant ST as SharedStateStore
+
+    U->>C: Objectif de projet
+    C->>P: Créer un plan
+    P-->>C: Tâches spécialisées
+    C->>ST: Publier objectif et plan
+
+    C->>CTX: Contexte researcher
+    CTX-->>C: Context pack filtré
+    C->>MCP: search_knowledge_base
+    MCP-->>R: Notes exploitables
+    R->>ST: Écrire recherche
+
+    C->>CTX: Contexte engineer
+    CTX-->>C: Context pack filtré
+    C->>MCP: generate_architecture
+    MCP-->>E: Proposition
+    E->>ST: Écrire architecture
+
+    C->>CTX: Contexte security
+    C->>S: Revue sécurité
+    S->>ST: Écrire risques
+
+    C->>CTX: Contexte reviewer
+    C->>V: Revue finale
+    V-->>C: Verdict et score
+    C-->>U: Résultat final + trace

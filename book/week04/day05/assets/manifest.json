@@ -1,0 +1,13 @@
+{
+  "week": 4,
+  "day": 5,
+  "title": "Workflow Engine",
+  "slug": "workflow_engine",
+  "source_of_truth": "Markdown",
+  "student_notebook": "notebooks/week04/S4_J5_workflow_engine.ipynb",
+  "teacher_notebook": "notebooks/week04/teacher/S4_J5_workflow_engine_teacher.ipynb",
+  "lab": "book/week04/day05/labs/workflow_engine_lab.py",
+  "tests": "book/week04/day05/labs/test_workflow_engine.py",
+  "mini_framework_module": "mini_framework/workflow.py",
+  "status": "complete"
+}

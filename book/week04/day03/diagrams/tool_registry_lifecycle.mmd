@@ -1,0 +1,19 @@
+flowchart TD
+    A[Agent] --> B[Discover tools]
+    B --> C[Select tool call]
+    C --> D[ToolRegistry lookup]
+    D --> E{Tool exists?}
+    E -- No --> F[ToolResult failed]
+    E -- Yes --> G{Enabled?}
+    G -- No --> H[ToolResult blocked]
+    G -- Yes --> I{Scope OK?}
+    I -- No --> H
+    I -- Yes --> J{Sensitive approved?}
+    J -- No --> H
+    J -- Yes --> K[Validate arguments]
+    K --> L{Valid?}
+    L -- No --> F
+    L -- Yes --> M[Execute handler]
+    M --> N[Normalize output]
+    N --> O[Trace]
+    O --> P[ToolResult completed]
