@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant U as User
+    participant API as Backend API
+    participant APP as Application Service
+    participant RT as Agent Runtime
+    participant MG as Model Gateway
+    participant TG as Tool Gateway
+    participant OBS as Observability
+
+    U->>API: POST /support/assist
+    API->>API: auth + validate + rate limit
+    API->>APP: execute use case
+    APP->>RT: run agent with bounded context
+    RT->>MG: model request
+    MG-->>RT: structured model response
+    RT->>TG: optional tool call
+    TG-->>RT: tool result or approval required
+    RT->>OBS: trace spans + metrics
+    RT-->>APP: AgentResult
+    APP-->>API: Product response
+    API-->>U: JSON response

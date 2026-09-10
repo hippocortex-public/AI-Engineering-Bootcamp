@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant C as Client
+    participant A as FastAPI App
+    participant M as Middleware
+    participant R as /v1/chat
+    participant S as Support Service
+    participant T as Transcript Store
+
+    C->>A: POST /v1/chat + X-API-Key
+    A->>M: resolve request id
+    M->>R: request.state.request_id
+    R->>R: validate ChatRequest
+    R->>R: check API key and rate limit
+    R->>S: answer(payload, request_id)
+    S->>S: classify intent + redact PII
+    S->>T: append turn
+    S-->>R: ChatResponse
+    R-->>C: 200 + X-Request-ID

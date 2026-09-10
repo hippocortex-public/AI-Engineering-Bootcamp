@@ -1,0 +1,34 @@
+{
+  "week": 5,
+  "day": 2,
+  "title": "API FastAPI",
+  "slug": "api_fastapi",
+  "roadmap_topic": "Production AI Systems",
+  "package": "ai_platform",
+  "modules": [
+    "ai_platform.architecture",
+    "ai_platform.api"
+  ],
+  "mandatory_files": [
+    "book/week05/day02/README.md",
+    "book/week05/day02/learning_objectives.md",
+    "book/week05/day02/chapter.md",
+    "book/week05/day02/exercises.md",
+    "book/week05/day02/interview.md",
+    "book/week05/day02/challenge.md",
+    "book/week05/day02/references.md",
+    "book/week05/day02/corriges/exercises_solution.md",
+    "book/week05/day02/corriges/interview_solution.md",
+    "book/week05/day02/corriges/challenge_solution.md",
+    "book/week05/day02/corriges/review.md"
+  ],
+  "labs": [
+    "book/week05/day02/labs/api_fastapi_lab.py",
+    "book/week05/day02/labs/test_api_fastapi.py"
+  ],
+  "notebooks": [
+    "notebooks/week05/S5_J2_api_fastapi.ipynb",
+    "notebooks/week05/teacher/S5_J2_api_fastapi_teacher.ipynb"
+  ],
+  "cumulative_init": true
+}

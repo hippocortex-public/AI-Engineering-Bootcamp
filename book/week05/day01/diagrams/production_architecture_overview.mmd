@@ -1,0 +1,15 @@
+flowchart LR
+    Client[Client / UI] --> API[Backend API]
+    API --> Auth[Auth + Rate Limiting]
+    Auth --> AppService[Application Service]
+    AppService --> Runtime[Agent Runtime]
+    Runtime --> ModelGateway[Model Gateway]
+    Runtime --> ToolGateway[Tool Gateway]
+    Runtime --> StateStore[(Conversation State Store)]
+    Runtime --> MemoryStore[(Memory Store)]
+    AppService --> BusinessDB[(Business Database)]
+    ModelGateway --> Provider[Model Provider]
+    ToolGateway --> Systems[Business Systems]
+    Runtime --> Obs[Observability]
+    AppService --> Obs
+    Obs --> Ops[Ops Dashboard]

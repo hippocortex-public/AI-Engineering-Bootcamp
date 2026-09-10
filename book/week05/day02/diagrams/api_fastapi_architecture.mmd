@@ -1,0 +1,10 @@
+flowchart LR
+    Client[Client HTTP] --> Middleware[Request ID Middleware]
+    Middleware --> Router[APIRouter /v1]
+    Router --> Auth[API Key Dependency]
+    Auth --> Schema[Pydantic Validation]
+    Schema --> RateLimit[Rate Limiter]
+    RateLimit --> Service[DeterministicSupportService]
+    Service --> Session[Session Store]
+    Service --> Response[ChatResponse]
+    Response --> Client

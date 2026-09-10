@@ -1,0 +1,32 @@
+{
+  "week": 5,
+  "day": 1,
+  "title": "Architecture production",
+  "slug": "architecture_production",
+  "source_of_truth": "markdown",
+  "package": "ai_platform",
+  "mandatory_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "labs": [
+    "labs/production_architecture_lab.py",
+    "labs/test_production_architecture.py"
+  ],
+  "notebooks": [
+    "notebooks/week05/S5_J1_architecture_production.ipynb",
+    "notebooks/week05/teacher/S5_J1_architecture_production_teacher.ipynb"
+  ],
+  "cumulative_init_rule": "add exports without removing previous public symbols"
+}

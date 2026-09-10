@@ -1,0 +1,75 @@
+{
+  "name": "support-ai-production",
+  "components": [
+    {
+      "name": "backend_api",
+      "kind": "api",
+      "critical": true
+    },
+    {
+      "name": "auth_rate_limit",
+      "kind": "security",
+      "critical": true
+    },
+    {
+      "name": "support_service",
+      "kind": "application_service",
+      "critical": true
+    },
+    {
+      "name": "agent_runtime",
+      "kind": "agent_runtime",
+      "critical": true
+    },
+    {
+      "name": "model_gateway",
+      "kind": "model_gateway",
+      "critical": true
+    },
+    {
+      "name": "tool_gateway",
+      "kind": "tool_gateway",
+      "critical": true
+    },
+    {
+      "name": "state_store",
+      "kind": "state_store",
+      "critical": true
+    },
+    {
+      "name": "memory_store",
+      "kind": "memory_store",
+      "critical": true
+    },
+    {
+      "name": "business_db",
+      "kind": "business_database",
+      "critical": true
+    },
+    {
+      "name": "observability",
+      "kind": "observability",
+      "critical": true
+    }
+  ],
+  "controls": [
+    "authentication",
+    "authorization",
+    "rate_limiting",
+    "timeouts",
+    "bounded_retries",
+    "structured_outputs",
+    "tool_argument_validation",
+    "pii_redaction",
+    "cost_budget",
+    "iteration_limit",
+    "trace_export",
+    "rollback_plan"
+  ],
+  "risks": [
+    "hallucination",
+    "tool_misuse",
+    "pii_leakage",
+    "cost_spike"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "request": {
+    "headers": {
+      "X-API-Key": "local-dev-key",
+      "X-Request-ID": "req-demo-001"
+    },
+    "body": {
+      "session_id": "session-001",
+      "user_id": "user-001",
+      "message": "I have a billing issue with invoice INV-42",
+      "metadata": {
+        "channel": "web"
+      }
+    }
+  },
+  "response": {
+    "request_id": "req-demo-001",
+    "session_id": "session-001",
+    "user_id": "user-001",
+    "intent": "billing",
+    "answer": "Je peux aider à qualifier la demande de facturation et préparer les informations nécessaires.",
+    "safety_status": "allowed",
+    "trace": [
+      "validated_request",
+      "classified:billing",
+      "safety:allowed",
+      "stored_turn"
+    ]
+  }
+}

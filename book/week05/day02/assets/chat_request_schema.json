@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ChatRequest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "session_id",
+    "user_id",
+    "message"
+  ],
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80,
+      "pattern": "^[a-zA-Z0-9_.:-]+$"
+    },
+    "user_id": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 80,
+      "pattern": "^[a-zA-Z0-9_.:-]+$"
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "metadata": {
+      "type": "object"
+    }
+  }
+}
