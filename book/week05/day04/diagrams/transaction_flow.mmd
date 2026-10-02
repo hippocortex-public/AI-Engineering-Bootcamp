@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant API as API FastAPI
+    participant SVC as Agent Service
+    participant PG as PostgreSQL
+    participant LLM as LLM Provider
+    participant TOOL as Tool Service
+
+    API->>SVC: demande utilisateur
+    SVC->>PG: BEGIN
+    SVC->>PG: insert message user
+    SVC->>PG: insert agent_run running
+    SVC->>LLM: appel modèle
+    SVC->>TOOL: appel outil optionnel
+    SVC->>PG: insert tool_call
+    SVC->>PG: insert message assistant
+    SVC->>PG: update agent_run succeeded
+    SVC->>PG: COMMIT

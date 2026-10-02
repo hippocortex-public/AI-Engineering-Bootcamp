@@ -1,0 +1,5 @@
+*
+!requirements.txt
+!deployment_ai_service/
+!deployment_ai_service/*.py
+!requirements.lock

@@ -1,0 +1,10 @@
+flowchart TD
+    A[Candidate identifiée] --> B{Schéma compatible ?}
+    B -->|Non| X[Refuser la livraison]
+    B -->|Oui| C[Déployer candidate]
+    C --> D{Readiness et smoke réussis ?}
+    D -->|Oui| E[Promouvoir et observer]
+    D -->|Non| F[Restaurer précédente]
+    F --> G{Retour vérifié ?}
+    G -->|Oui| H[Rollback confirmé]
+    G -->|Non| I[Intervention requise]

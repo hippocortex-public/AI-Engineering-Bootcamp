@@ -1,0 +1,13 @@
+flowchart LR
+    U[Utilisateur] --> API[FastAPI]
+    API --> AG[Agent Service]
+    AG --> LLM[LLM Provider]
+    AG --> TOOLS[Tool Services]
+    AG --> REDIS[(Redis)]
+    AG --> PG[(PostgreSQL)]
+
+    REDIS -->|cache, session courte, rate limit| AG
+    PG -->|conversations, messages, runs, audit| AG
+
+    PG --> OBS[Monitoring]
+    PG --> EVAL[Evaluation Pipeline]

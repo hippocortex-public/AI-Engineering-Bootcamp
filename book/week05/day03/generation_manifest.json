@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-09-11",
+  "deliverable": "Semaine 5 Jour 3 - Redis",
+  "root": "ai-engineering-bootcamp",
+  "paths": {
+    "day": "book/week05/day03",
+    "student_notebook": "notebooks/week05/S5_J3_redis.ipynb",
+    "teacher_notebook": "notebooks/week05/teacher/S5_J3_redis_teacher.ipynb"
+  },
+  "checks": {
+    "README.md": true,
+    "learning_objectives.md": true,
+    "chapter.md": true,
+    "exercises.md": true,
+    "interview.md": true,
+    "challenge.md": true,
+    "references.md": true,
+    "corriges/": true,
+    "diagrams/": true,
+    "assets/": true,
+    "labs/": true,
+    "corriges/exercises_solution.md": true,
+    "corriges/interview_solution.md": true,
+    "corriges/challenge_solution.md": true,
+    "corriges/review.md": true,
+    "notebooks/week05/S5_J3_redis.ipynb": true,
+    "notebooks/week05/teacher/S5_J3_redis_teacher.ipynb": true,
+    "lab_python_syntax": true,
+    "lab_tests": true,
+    "student_notebook_excludes_corriges": true,
+    "teacher_notebook_includes_corriges": true
+  },
+  "pytest_stdout": "\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m                                                                       [100%]\u001b[0m\n\u001b[32m\u001b[32m\u001b[1m2 passed\u001b[0m\u001b[32m in 0.11s\u001b[0m\u001b[0m\n",
+  "pytest_stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py\", line 772, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py\", line 37, in get_or_create_client\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py\", line 124, in start_daemon\nTimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.\n",
+  "compile_stdout": "Listing '/mnt/data/ai-engineering-bootcamp/book/week05/day03/labs/app'...\nCompiling '/mnt/data/ai-engineering-bootcamp/book/week05/day03/labs/app/__init__.py'...\nCompiling '/mnt/data/ai-engineering-bootcamp/book/week05/day03/labs/app/cache.py'...\nCompiling '/mnt/data/ai-engineering-bootcamp/book/week05/day03/labs/app/main.py'...\nCompiling '/mnt/data/ai-engineering-bootcamp/book/week05/day03/labs/app/rate_limit.py'...\nCompiling '/mnt/data/ai-engineering-bootcamp/book/week05/day03/labs/app/redis_client.py'...\nCompiling '/mnt/data/ai-engineering-bootcamp/book/week05/day03/labs/app/schemas.py'...\n",
+  "compile_stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py\", line 772, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py\", line 37, in get_or_create_client\n  File \"/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py\", line 124, in start_daemon\nTimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.\n"
+}

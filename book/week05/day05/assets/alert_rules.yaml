@@ -1,0 +1,20 @@
+alerts:
+  - name: high_error_rate
+    severity: critical
+    condition: error_rate > 0.05
+    runbook: check_recent_deployments_and_provider_status
+
+  - name: high_p95_latency
+    severity: warning
+    condition: p95_latency_ms > 3000
+    runbook: inspect_prompt_size_dependencies_and_model_latency
+
+  - name: high_estimated_cost
+    severity: warning
+    condition: estimated_cost_usd > 75
+    runbook: inspect_token_usage_cache_and_retries
+
+  - name: empty_response_spike
+    severity: warning
+    condition: empty_response_count > 10
+    runbook: inspect_model_outputs_prompt_changes_and_safety_filters

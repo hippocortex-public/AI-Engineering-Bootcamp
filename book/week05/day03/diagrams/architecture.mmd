@@ -1,0 +1,20 @@
+flowchart LR
+    Client[Client HTTP] --> API[FastAPI AI API]
+    API --> Redis[(Redis)]
+    API --> Provider[LLM Provider]
+    API --> Metrics[Logs / Metrics]
+
+    subgraph Redis_Uses[Usages Redis]
+        Cache[Cache LLM]
+        Session[Session courte]
+        Rate[Rate limiting]
+        Idem[Idempotence]
+    end
+
+    Redis --> Cache
+    Redis --> Session
+    Redis --> Rate
+    Redis --> Idem
+
+    API -- cache miss --> Provider
+    API -- cache hit --> Redis

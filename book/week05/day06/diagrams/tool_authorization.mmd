@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant C as Client
+    participant A as API
+    participant P as Politique
+    participant D as Documents
+    C->>A: Outil et arguments
+    A->>P: Principal authentifié et outil
+    P-->>A: Scope et allowlist valides
+    A->>A: Valider les arguments
+    A->>D: Lecture avec principal serveur
+    D->>D: Vérifier tenant et permission
+    alt Document accessible
+        D-->>A: Document autorisé
+        A-->>C: Résultat
+    else Document inaccessible
+        D-->>A: Not found
+        A-->>C: 404 générique
+    end

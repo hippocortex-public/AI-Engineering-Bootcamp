@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant Client
+    participant API
+    participant Monitor
+    participant Model
+    participant Metrics
+    participant Alerting
+
+    Client->>API: POST /chat
+    API->>Monitor: create request_id
+    API->>Model: generate simulated response
+    Model-->>API: answer + token usage
+    API->>Metrics: record latency, tokens, cost, status
+    API-->>Client: response + request_id
+    Alerting->>Metrics: read snapshot
+    Alerting-->>Alerting: evaluate thresholds

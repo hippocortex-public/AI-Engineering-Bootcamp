@@ -1,0 +1,9 @@
+flowchart TD
+    A[Client non fiable] --> B{Identité validée ?}
+    B -->|Non| X[Refus 401]
+    B -->|Oui| C[Principal serveur]
+    C --> D{Scope et quota ?}
+    D -->|Non| Y[Refus 403 ou 429]
+    D -->|Oui| E{Outil et ressource autorisés ?}
+    E -->|Non| Z[Refus 403 ou 404]
+    E -->|Oui| F[Traitement et audit]

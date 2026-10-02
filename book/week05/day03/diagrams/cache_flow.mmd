@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant API as FastAPI
+    participant R as Redis
+    participant L as LLM
+
+    API->>API: Build canonical payload
+    API->>API: Hash SHA-256
+    API->>R: GET cache key
+    alt cache hit
+        R-->>API: cached response
+    else cache miss
+        API->>L: generate response
+        L-->>API: response
+        API->>R: SET response EX ttl
+    end

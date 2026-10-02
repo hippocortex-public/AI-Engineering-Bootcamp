@@ -1,0 +1,47 @@
+# Exemple à copier dans .github/workflows après adaptation au dépôt public.
+# Aucune action externe : compatible avec une politique d'allowlist d'actions.
+name: validate-week05-day07
+on:
+  push:
+    paths: [book/week05/day07/**]
+  pull_request:
+    paths: [book/week05/day07/**]
+permissions:
+  contents: read
+jobs:
+  deployment-lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Fetch public repository without an external action
+        env:
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          git init .
+          git remote add origin "https://github.com/${SOURCE_REPOSITORY}.git"
+          git fetch --depth=1 origin "$SOURCE_SHA"
+          git checkout --detach FETCH_HEAD
+      - name: Test, build and validate disposable stack
+        working-directory: book/week05/day07/labs
+        env:
+          APP_IMAGE: bootcamp-ai:ci-${{ github.sha }}
+          APP_RELEASE: ci-${{ github.sha }}
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install -r requirements-dev.txt
+          .venv/bin/python -m pytest -q
+          .venv/bin/python configure_demo.py
+          docker compose config -q
+          docker compose build api
+          docker compose up -d --wait --wait-timeout 120
+          .venv/bin/python smoke_test.py
+      - name: Cleanup disposable CI stack
+        if: always()
+        working-directory: book/week05/day07/labs
+        env:
+          APP_IMAGE: bootcamp-ai:ci-${{ github.sha }}
+          APP_RELEASE: ci-${{ github.sha }}
+        run: |
+          # Les volumes de ce runner sont éphémères et ne contiennent aucune donnée réelle.
+          docker compose down --volumes

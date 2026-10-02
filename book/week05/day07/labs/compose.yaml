@@ -1,0 +1,90 @@
+name: bootcamp-week05
+services:
+  api:
+    image: ${APP_IMAGE:-bootcamp-ai:release-001}
+    build: .
+    init: true
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 100
+    mem_limit: 256m
+    cpus: 1.0
+    stop_grace_period: 30s
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      PG_HOST: db
+      PG_DB: bootcamp
+      PG_USER: bootcamp_app
+      PG_PASSWORD_FILE: /run/secrets/db_app_password
+      REDIS_HOST: redis
+      REDIS_PASSWORD_FILE: /run/secrets/redis_password
+      AUTH_IDENTITIES_FILE: /run/secrets/api_identities
+      APP_RELEASE: ${APP_RELEASE:-release-001}
+    secrets: [db_app_password, redis_password, api_identities]
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=7)"]
+      interval: 10s
+      timeout: 8s
+      retries: 6
+      start_period: 15s
+    networks: [frontend, backend]
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+  db:
+    image: postgres:16-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bootcamp
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_admin_password
+    secrets: [db_admin_password, db_app_password]
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./postgres/001-init.sh:/docker-entrypoint-initdb.d/001-init.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U postgres -d bootcamp"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    networks: [backend]
+  redis:
+    image: redis:7.4-bookworm
+    restart: unless-stopped
+    entrypoint: [/bin/sh, /bootstrap-redis.sh]
+    secrets: [redis_password]
+    volumes:
+      - redis_data:/data
+      - ./redis/bootstrap.sh:/bootstrap-redis.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, 'REDISCLI_AUTH="$$(cat /run/secrets/redis_password)" redis-cli ping | grep -q PONG']
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    networks: [backend]
+networks:
+  frontend: {}
+  backend:
+    internal: true
+volumes:
+  pg_data: {}
+  redis_data: {}
+secrets:
+  db_admin_password:
+    file: ./secrets/db_admin_password
+  db_app_password:
+    file: ./secrets/db_app_password
+  redis_password:
+    file: ./secrets/redis_password
+  api_identities:
+    file: ./secrets/api_identities.json

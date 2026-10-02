@@ -1,0 +1,11 @@
+flowchart LR
+    U[Utilisateur] --> API[FastAPI AI Service]
+    API --> CACHE[Redis cache]
+    API --> DB[(PostgreSQL)]
+    API --> LLM[Fournisseur LLM]
+    API --> LOGS[Logs structurés]
+    API --> METRICS[Metrics Store]
+    METRICS --> ENDPOINT[/metrics]
+    ENDPOINT --> DASH[Dashboard]
+    DASH --> ALERTS[Alerting]
+    ALERTS --> OPS[AI Engineering / Ops]

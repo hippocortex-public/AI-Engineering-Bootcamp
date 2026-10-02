@@ -1,0 +1,15 @@
+{
+  "deliverable": "Semaine 5 Jour 4 — PostgreSQL",
+  "roadmap_scope": "Week 5 Production AI Systems / J4 PostgreSQL",
+  "generated_at": "2026-09-11",
+  "source_of_truth": "Markdown",
+  "mandatory_files_verified": true,
+  "tests": {
+    "compileall": "passed",
+    "unittest": "13 passed"
+  },
+  "notebooks": [
+    "notebooks/week05/S5_J4_postgresql.ipynb",
+    "notebooks/week05/teacher/S5_J4_postgresql_teacher.ipynb"
+  ]
+}

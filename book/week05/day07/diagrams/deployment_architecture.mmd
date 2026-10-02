@@ -1,0 +1,10 @@
+flowchart TD
+    C[Client localhost] --> A[API non root]
+    A --> P[(PostgreSQL)]
+    A --> R[(Redis cache et quota)]
+    S[Secrets ciblés] --> A
+    S --> P
+    S --> R
+    P --> V[Volume PostgreSQL]
+    R --> W[Volume Redis]
+    A --> O[Audit et métriques]

@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant C as Client
+    participant A as API
+    participant R as Redis
+
+    C->>A: Request
+    A->>R: INCR ratelimit key
+    alt count == 1
+        A->>R: EXPIRE key 60s
+    end
+    alt count <= limit
+        A-->>C: 200 OK
+    else count > limit
+        A-->>C: 429 Too Many Requests
+    end

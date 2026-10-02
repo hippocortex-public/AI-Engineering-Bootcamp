@@ -1,0 +1,59 @@
+erDiagram
+    conversations ||--o{ messages : contains
+    conversations ||--o{ agent_runs : triggers
+    agent_runs ||--o{ tool_calls : performs
+    agent_runs ||--o{ evaluations : receives
+
+    conversations {
+        uuid id PK
+        text tenant_id
+        text user_id
+        text title
+        text status
+        jsonb metadata
+        timestamptz created_at
+        timestamptz updated_at
+    }
+
+    messages {
+        uuid id PK
+        uuid conversation_id FK
+        text role
+        text content
+        jsonb metadata
+        timestamptz created_at
+    }
+
+    agent_runs {
+        uuid id PK
+        uuid conversation_id FK
+        text status
+        text model
+        text prompt_version
+        integer input_tokens
+        integer output_tokens
+        integer latency_ms
+        text error_message
+        timestamptz started_at
+        timestamptz finished_at
+    }
+
+    tool_calls {
+        uuid id PK
+        uuid agent_run_id FK
+        text tool_name
+        jsonb arguments
+        jsonb result
+        text status
+        integer latency_ms
+        timestamptz created_at
+    }
+
+    evaluations {
+        uuid id PK
+        uuid agent_run_id FK
+        text metric_name
+        numeric score
+        text comment
+        timestamptz created_at
+    }

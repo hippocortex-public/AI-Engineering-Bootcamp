@@ -1,0 +1,3 @@
+# Runtime volontairement minimal pour que les tests fonctionnent sans dépendance externe.
+# Pour connecter PostgreSQL réellement :
+# psycopg[binary]>=3.2

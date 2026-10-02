@@ -1,0 +1,13 @@
+[project]
+name = "postgresql-ai-persistence"
+version = "0.1.0"
+description = "AI Engineering Bootcamp lab for PostgreSQL persistence"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

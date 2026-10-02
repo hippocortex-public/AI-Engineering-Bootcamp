@@ -1,0 +1,26 @@
+{
+  "week": 5,
+  "day": 5,
+  "topic": "Monitoring",
+  "slug": "monitoring",
+  "source_files": [
+    "README.md",
+    "learning_objectives.md",
+    "chapter.md",
+    "exercises.md",
+    "interview.md",
+    "challenge.md",
+    "references.md"
+  ],
+  "corrections": [
+    "corriges/exercises_solution.md",
+    "corriges/interview_solution.md",
+    "corriges/challenge_solution.md",
+    "corriges/review.md"
+  ],
+  "notebooks": [
+    "notebooks/week05/S5_J5_monitoring.ipynb",
+    "notebooks/week05/teacher/S5_J5_monitoring_teacher.ipynb"
+  ],
+  "lab_tests": "pytest"
+}
