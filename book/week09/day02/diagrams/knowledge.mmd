@@ -1,0 +1,7 @@
+flowchart TD
+ A["Texte et tokenizer"] --> B["Encodeur versionné"]
+ B --> C["Vecteur et dimension"]
+ C --> D["Normalisation"]
+ D --> E["Cosinus"]
+ F["Empreinte d’index"] --> G["Contrôle de compatibilité"]
+ C --> G

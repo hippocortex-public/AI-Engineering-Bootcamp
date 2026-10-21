@@ -1,0 +1,10 @@
+flowchart TD
+ A["Ticket texte"] --> B["Classification et abstention"]
+ A --> C["Champs et preuves"]
+ A --> D["Résumé et entités"]
+ B --> E["Résultat structuré"]
+ C --> E
+ D --> E
+ E --> F{"Revue nécessaire ?"}
+ F --> G["Analyse, sans action métier"]
+ H["Rapports de tâche et tests"] --> I["Décision d’évolution"]

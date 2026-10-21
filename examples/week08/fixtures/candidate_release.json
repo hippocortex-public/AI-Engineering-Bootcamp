@@ -1,0 +1,10 @@
+{
+  "release_id": "s8-candidate",
+  "owner": "engineer-demo",
+  "reviewer": "reviewer-demo",
+  "approved": true,
+  "config_hash": "9ec9308d9053ebcedb00bd43d5c6c98951229c61f739c4a62557c278dc4a9e9b",
+  "valid_until": "2026-11-20",
+  "risk_review": "synthetic-review-001",
+  "rollback_ref": "release-previous-synthetic"
+}

@@ -1,0 +1,74 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "scikit_learn": "1.8.0",
+  "data_hash": "c4b644497baaa916c7435e297725a77f987c1da8bd3d238f2f41693c33f3095d",
+  "examples_hash": "c81a1b34804eb07660499e630a16b5a7cbaf71f5fb3e92782cfda70c5102c214",
+  "provenance": {
+    "train_hash": "73a5f4500a0655a2c418b26aa071a369eb772336921e551edfa923e8b9207259",
+    "adapt_hash": "d20fa22422c5f2df7fceff88e62dd2dd3c713210122830252d04b79bac9bb525",
+    "validation_hash": "e029c2ac0c28439abbdd40eaf14525196865776a486162963339e9fe6b877bfc",
+    "seed": 17,
+    "vectorizer_fit": "train only",
+    "head_selection": "validation only"
+  },
+  "selected_epochs": 1,
+  "threshold_trials": {
+    "baseline": [
+      {
+        "threshold": 0.34,
+        "coverage": 1.0,
+        "selective_accuracy": 0.9166666666666666
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.9166666666666666,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.65,
+        "coverage": 0.9166666666666666,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.6666666666666666,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.0,
+        "selective_accuracy": null
+      }
+    ],
+    "adapted": [
+      {
+        "threshold": 0.34,
+        "coverage": 1.0,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.5,
+        "coverage": 0.9166666666666666,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.65,
+        "coverage": 0.9166666666666666,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.8,
+        "coverage": 0.6666666666666666,
+        "selective_accuracy": 1.0
+      },
+      {
+        "threshold": 0.9,
+        "coverage": 0.0,
+        "selective_accuracy": null
+      }
+    ]
+  },
+  "nature": "real local learning; fictional corpus; LoRA not executed"
+}

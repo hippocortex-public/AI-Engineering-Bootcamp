@@ -1,0 +1,8 @@
+flowchart TD
+  A["Traitement"] --> B{"Résultat"}
+  B -->|valide| C["Validation humaine"]
+  B -->|temporaire| D{"Budget restant ?"}
+  D -->|oui| E["Date de reprise"]
+  E --> A
+  D -->|non| F["Dead letter"]
+  B -->|contrat invalide| F

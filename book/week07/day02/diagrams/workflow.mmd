@@ -1,0 +1,9 @@
+stateDiagram-v2
+  [*] --> received
+  received --> awaiting_review: proposition valide
+  received --> retry: panne temporaire
+  retry --> awaiting_review: reprise
+  retry --> dead_letter: limite atteinte
+  awaiting_review --> published: approbation
+  awaiting_review --> rejected: refus
+  awaiting_review --> expired: délai dépassé

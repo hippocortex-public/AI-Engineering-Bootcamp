@@ -1,0 +1,9 @@
+flowchart TD
+ A["Question et tenant autorisé"] --> B["Retrieval hybride"]
+ B --> C["Reranking et budget"]
+ C --> D{"Passages étayés ?"}
+ D -->|non| E["Abstention"]
+ D -->|oui| F["Extraits et citations"]
+ F --> G["Contrôle des références"]
+ H["Qrels et cas négatifs"] --> I["Évaluation par mode"]
+ B --> I

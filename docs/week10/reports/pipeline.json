@@ -1,0 +1,993 @@
+{
+  "records": [
+    {
+      "id": "e1",
+      "classification": {
+        "label": "acces",
+        "status": "classified",
+        "max_probability": 0.45015124143741786,
+        "threshold": 0.34,
+        "note": "Probabilité du classifieur non calibrée; pas une garantie métier"
+      },
+      "fields": {
+        "ticket_id": {
+          "status": "present",
+          "value": "INC-204",
+          "evidence": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "INC-204",
+              "value": "INC-204"
+            }
+          ]
+        },
+        "environment": {
+          "status": "present",
+          "value": "prod",
+          "evidence": [
+            {
+              "start": 33,
+              "end": 37,
+              "text": "prod",
+              "value": "prod"
+            }
+          ]
+        },
+        "http_status": {
+          "status": "present",
+          "value": 503,
+          "evidence": [
+            {
+              "start": 86,
+              "end": 94,
+              "text": "HTTP 503",
+              "value": 503
+            }
+          ]
+        },
+        "duration_ms": {
+          "status": "present",
+          "value": "1500",
+          "evidence": [
+            {
+              "start": 42,
+              "end": 62,
+              "text": "latence est de 1,5 s",
+              "value": "1500"
+            }
+          ]
+        }
+      },
+      "summary": {
+        "summary": "Kafka accumule des événements. Contact : alice@example.invalid.",
+        "sentences": [
+          {
+            "start": 96,
+            "end": 126,
+            "text": "Kafka accumule des événements.",
+            "score": 0.49999999999999983
+          },
+          {
+            "start": 127,
+            "end": 159,
+            "text": "Contact : alice@example.invalid.",
+            "score": 0.49999999999999983
+          }
+        ],
+        "word_count": 7,
+        "status": "extract",
+        "method": "TF-IDF sentence/centroid, extractive"
+      },
+      "entities": [
+        {
+          "start": 17,
+          "end": 29,
+          "text": "Paiement API",
+          "label": "SERVICE"
+        },
+        {
+          "start": 33,
+          "end": 37,
+          "text": "prod",
+          "label": "ENV"
+        },
+        {
+          "start": 96,
+          "end": 101,
+          "text": "Kafka",
+          "label": "TECH"
+        },
+        {
+          "start": 137,
+          "end": 158,
+          "text": "alice@example.invalid",
+          "label": "EMAIL"
+        }
+      ],
+      "requires_review": false,
+      "scope": "analysis only, no action or external publication"
+    },
+    {
+      "id": "e2",
+      "classification": {
+        "label": "performance",
+        "status": "classified",
+        "max_probability": 0.6233583294903251,
+        "threshold": 0.34,
+        "note": "Probabilité du classifieur non calibrée; pas une garantie métier"
+      },
+      "fields": {
+        "ticket_id": {
+          "status": "present",
+          "value": "INC-305",
+          "evidence": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "INC-305",
+              "value": "INC-305"
+            }
+          ]
+        },
+        "environment": {
+          "status": "present",
+          "value": "recette",
+          "evidence": [
+            {
+              "start": 34,
+              "end": 41,
+              "text": "recette",
+              "value": "recette"
+            }
+          ]
+        },
+        "http_status": {
+          "status": "missing",
+          "value": null,
+          "evidence": []
+        },
+        "duration_ms": {
+          "status": "present",
+          "value": "250",
+          "evidence": [
+            {
+              "start": 80,
+              "end": 97,
+              "text": "latence de 250 ms",
+              "value": "250"
+            }
+          ]
+        }
+      },
+      "summary": {
+        "summary": "INC-305 concerne Catalogue API en recette. Le correctif sera vérifié dans PostgreSQL.",
+        "sentences": [
+          {
+            "start": 0,
+            "end": 42,
+            "text": "INC-305 concerne Catalogue API en recette.",
+            "score": 0.5773502691896257
+          },
+          {
+            "start": 99,
+            "end": 141,
+            "text": "Le correctif sera vérifié dans PostgreSQL.",
+            "score": 0.5773502691896258
+          }
+        ],
+        "word_count": 12,
+        "status": "extract",
+        "method": "TF-IDF sentence/centroid, extractive"
+      },
+      "entities": [
+        {
+          "start": 17,
+          "end": 30,
+          "text": "Catalogue API",
+          "label": "SERVICE"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "text": "recette",
+          "label": "ENV"
+        },
+        {
+          "start": 43,
+          "end": 48,
+          "text": "Redis",
+          "label": "TECH"
+        },
+        {
+          "start": 130,
+          "end": 140,
+          "text": "PostgreSQL",
+          "label": "TECH"
+        }
+      ],
+      "requires_review": false,
+      "scope": "analysis only, no action or external publication"
+    },
+    {
+      "id": "e3",
+      "classification": {
+        "label": "acces",
+        "status": "classified",
+        "max_probability": 0.8609238174333601,
+        "threshold": 0.34,
+        "note": "Probabilité du classifieur non calibrée; pas une garantie métier"
+      },
+      "fields": {
+        "ticket_id": {
+          "status": "present",
+          "value": "INC-406",
+          "evidence": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "INC-406",
+              "value": "INC-406"
+            }
+          ]
+        },
+        "environment": {
+          "status": "present",
+          "value": "prod",
+          "evidence": [
+            {
+              "start": 33,
+              "end": 43,
+              "text": "production",
+              "value": "prod"
+            }
+          ]
+        },
+        "http_status": {
+          "status": "present",
+          "value": 401,
+          "evidence": [
+            {
+              "start": 62,
+              "end": 70,
+              "text": "HTTP 401",
+              "value": 401
+            }
+          ]
+        },
+        "duration_ms": {
+          "status": "missing",
+          "value": null,
+          "evidence": []
+        }
+      },
+      "summary": {
+        "summary": "Le compte reçoit HTTP 401. Le jeton a expiré.",
+        "sentences": [
+          {
+            "start": 45,
+            "end": 71,
+            "text": "Le compte reçoit HTTP 401.",
+            "score": 0.5361948501972854
+          },
+          {
+            "start": 72,
+            "end": 90,
+            "text": "Le jeton a expiré.",
+            "score": 0.5361948501972855
+          }
+        ],
+        "word_count": 9,
+        "status": "extract",
+        "method": "TF-IDF sentence/centroid, extractive"
+      },
+      "entities": [
+        {
+          "start": 17,
+          "end": 29,
+          "text": "Paiement API",
+          "label": "SERVICE"
+        },
+        {
+          "start": 33,
+          "end": 43,
+          "text": "production",
+          "label": "ENV"
+        }
+      ],
+      "requires_review": false,
+      "scope": "analysis only, no action or external publication"
+    },
+    {
+      "id": "e4",
+      "classification": {
+        "label": "acces",
+        "status": "classified",
+        "max_probability": 0.4955629206923716,
+        "threshold": 0.34,
+        "note": "Probabilité du classifieur non calibrée; pas une garantie métier"
+      },
+      "fields": {
+        "ticket_id": {
+          "status": "present",
+          "value": "INC-507",
+          "evidence": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "INC-507",
+              "value": "INC-507"
+            }
+          ]
+        },
+        "environment": {
+          "status": "present",
+          "value": "dev",
+          "evidence": [
+            {
+              "start": 34,
+              "end": 37,
+              "text": "dev",
+              "value": "dev"
+            }
+          ]
+        },
+        "http_status": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [
+            {
+              "start": 58,
+              "end": 66,
+              "text": "HTTP 401",
+              "value": 401
+            },
+            {
+              "start": 70,
+              "end": 78,
+              "text": "HTTP 503",
+              "value": 503
+            }
+          ]
+        },
+        "duration_ms": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [
+            {
+              "start": 83,
+              "end": 104,
+              "text": "latence est de 100 ms",
+              "value": "100"
+            },
+            {
+              "start": 113,
+              "end": 130,
+              "text": "latence de 200 ms",
+              "value": "200"
+            }
+          ]
+        }
+      },
+      "summary": {
+        "summary": "INC-507 concerne Catalogue API en dev. La latence est de 100 ms puis la latence de 200 ms.",
+        "sentences": [
+          {
+            "start": 0,
+            "end": 38,
+            "text": "INC-507 concerne Catalogue API en dev.",
+            "score": 0.5773502691896258
+          },
+          {
+            "start": 80,
+            "end": 131,
+            "text": "La latence est de 100 ms puis la latence de 200 ms.",
+            "score": 0.5773502691896261
+          }
+        ],
+        "word_count": 18,
+        "status": "extract",
+        "method": "TF-IDF sentence/centroid, extractive"
+      },
+      "entities": [
+        {
+          "start": 17,
+          "end": 30,
+          "text": "Catalogue API",
+          "label": "SERVICE"
+        },
+        {
+          "start": 34,
+          "end": 37,
+          "text": "dev",
+          "label": "ENV"
+        }
+      ],
+      "requires_review": true,
+      "scope": "analysis only, no action or external publication"
+    }
+  ],
+  "classifier_evaluation": {
+    "selected_epochs": 1,
+    "selection": [
+      {
+        "epochs": 1,
+        "validation_macro_f1": 1.0
+      },
+      {
+        "epochs": 3,
+        "validation_macro_f1": 1.0
+      },
+      {
+        "epochs": 8,
+        "validation_macro_f1": 1.0
+      }
+    ],
+    "baseline": {
+      "count": 12,
+      "labels": [
+        "acces",
+        "deploiement",
+        "performance"
+      ],
+      "accuracy_argmax": 1.0,
+      "macro_f1_argmax": 1.0,
+      "confusion_matrix": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "threshold": 0.34,
+      "coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "cases": [
+        {
+          "id": "deploiement-test-01",
+          "gold": "deploiement",
+          "predicted": "deploiement",
+          "accepted": true,
+          "max_probability": 0.8833316785093153
+        },
+        {
+          "id": "deploiement-test-02",
+          "gold": "deploiement",
+          "predicted": "deploiement",
+          "accepted": true,
+          "max_probability": 0.7956171744796714
+        },
+        {
+          "id": "deploiement-test-03",
+          "gold": "deploiement",
+          "predicted": "deploiement",
+          "accepted": true,
+          "max_probability": 0.8221263230440552
+        },
+        {
+          "id": "deploiement-test-04",
+          "gold": "deploiement",
+          "predicted": "deploiement",
+          "accepted": true,
+          "max_probability": 0.8473038163654285
+        },
+        {
+          "id": "performance-test-01",
+          "gold": "performance",
+          "predicted": "performance",
+          "accepted": true,
+          "max_probability": 0.5924515840372594
+        },
+        {
+          "id": "performance-test-02",
+          "gold": "performance",
+          "predicted": "performance",
+          "accepted": true,
+          "max_probability": 0.7531116964573009
+        },
+        {
+          "id": "performance-test-03",
+          "gold": "performance",
+          "predicted": "performance",
+          "accepted": true,
+          "max_probability": 0.8967582822472335
+        },
+        {
+          "id": "performance-test-04",
+          "gold": "performance",
+          "predicted": "performance",
+          "accepted": true,
+          "max_probability": 0.8883968768754711
+        },
+        {
+          "id": "acces-test-01",
+          "gold": "acces",
+          "predicted": "acces",
+          "accepted": true,
+          "max_probability": 0.8731133996583939
+        },
+        {
+          "id": "acces-test-02",
+          "gold": "acces",
+          "predicted": "acces",
+          "accepted": true,
+          "max_probability": 0.7005228884302043
+        },
+        {
+          "id": "acces-test-03",
+          "gold": "acces",
+          "predicted": "acces",
+          "accepted": true,
+          "max_probability": 0.8037356960668599
+        },
+        {
+          "id": "acces-test-04",
+          "gold": "acces",
+          "predicted": "acces",
+          "accepted": true,
+          "max_probability": 0.8436915782318878
+        }
+      ]
+    },
+    "adapted": {
+      "count": 12,
+      "labels": [
+        "acces",
+        "deploiement",
+        "performance"
+      ],
+      "accuracy_argmax": 1.0,
+      "macro_f1_argmax": 1.0,
+      "confusion_matrix": [
+        [
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          4
+        ]
+      ],
+      "threshold": 0.34,
+      "coverage": 1.0,
+      "selective_accuracy": 1.0,
+      "cases": [
+        {
+          "id": "deploiement-test-01",
+          "gold": "deploiement",
+          "predicted": "deploiement",
+          "accepted": true,
+          "max_probability": 0.8842926060457942
+        },
+        {
+          "id": "deploiement-test-02",
+          "gold": "deploiement",
+          "predicted": "deploiement",
+          "accepted": true,
+          "max_probability": 0.7958663456712772
+        },
+        {
+          "id": "deploiement-test-03",
+          "gold": "deploiement",
+          "predicted": "deploiement",
+          "accepted": true,
+          "max_probability": 0.8223241404267244
+        },
+        {
+          "id": "deploiement-test-04",
+          "gold": "deploiement",
+          "predicted": "deploiement",
+          "accepted": true,
+          "max_probability": 0.8481910308551874
+        },
+        {
+          "id": "performance-test-01",
+          "gold": "performance",
+          "predicted": "performance",
+          "accepted": true,
+          "max_probability": 0.595195506490557
+        },
+        {
+          "id": "performance-test-02",
+          "gold": "performance",
+          "predicted": "performance",
+          "accepted": true,
+          "max_probability": 0.7559301298710092
+        },
+        {
+          "id": "performance-test-03",
+          "gold": "performance",
+          "predicted": "performance",
+          "accepted": true,
+          "max_probability": 0.8975148682090472
+        },
+        {
+          "id": "performance-test-04",
+          "gold": "performance",
+          "predicted": "performance",
+          "accepted": true,
+          "max_probability": 0.889319948385926
+        },
+        {
+          "id": "acces-test-01",
+          "gold": "acces",
+          "predicted": "acces",
+          "accepted": true,
+          "max_probability": 0.8741783321666043
+        },
+        {
+          "id": "acces-test-02",
+          "gold": "acces",
+          "predicted": "acces",
+          "accepted": true,
+          "max_probability": 0.7115696743430736
+        },
+        {
+          "id": "acces-test-03",
+          "gold": "acces",
+          "predicted": "acces",
+          "accepted": true,
+          "max_probability": 0.8123743552643028
+        },
+        {
+          "id": "acces-test-04",
+          "gold": "acces",
+          "predicted": "acces",
+          "accepted": true,
+          "max_probability": 0.8455226479578142
+        }
+      ]
+    },
+    "vocabulary_unchanged": true,
+    "head_weights_changed": true,
+    "method": "continued linear-head training, frozen TF-IDF; not LLM LoRA"
+  },
+  "ner_evaluation": {
+    "true_positive": 12,
+    "false_positive": 0,
+    "false_negative": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "protocol": "exact document/start/end/label spans"
+  },
+  "embedding_evaluation": {
+    "retrieval": {
+      "queries": 12,
+      "index_documents": 36,
+      "relevance": "same topic label proxy, not human semantic qrels",
+      "modes": {
+        "tfidf": {
+          "dimension": 441,
+          "cases": [
+            {
+              "id": "deploiement-test-01",
+              "gold_topic": "deploiement",
+              "ranked_ids": [
+                "deploiement-train-07",
+                "deploiement-train-03",
+                "deploiement-train-02"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "deploiement-test-02",
+              "gold_topic": "deploiement",
+              "ranked_ids": [
+                "deploiement-train-08",
+                "deploiement-train-06",
+                "deploiement-train-01"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "deploiement-test-03",
+              "gold_topic": "deploiement",
+              "ranked_ids": [
+                "deploiement-train-04",
+                "deploiement-train-11",
+                "deploiement-train-07"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "deploiement-test-04",
+              "gold_topic": "deploiement",
+              "ranked_ids": [
+                "deploiement-train-02",
+                "deploiement-train-05",
+                "deploiement-train-10"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "performance-test-01",
+              "gold_topic": "performance",
+              "ranked_ids": [
+                "performance-train-04",
+                "performance-train-07",
+                "acces-train-08"
+              ],
+              "precision_at_3": 0.6666666666666666,
+              "recall_at_3": 0.16666666666666666,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "performance-test-02",
+              "gold_topic": "performance",
+              "ranked_ids": [
+                "performance-train-01",
+                "performance-train-06",
+                "acces-train-01"
+              ],
+              "precision_at_3": 0.6666666666666666,
+              "recall_at_3": 0.16666666666666666,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "performance-test-03",
+              "gold_topic": "performance",
+              "ranked_ids": [
+                "performance-train-12",
+                "performance-train-03",
+                "performance-train-11"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "performance-test-04",
+              "gold_topic": "performance",
+              "ranked_ids": [
+                "performance-train-10",
+                "performance-train-02",
+                "performance-train-08"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "acces-test-01",
+              "gold_topic": "acces",
+              "ranked_ids": [
+                "acces-train-01",
+                "acces-train-03",
+                "acces-train-08"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "acces-test-02",
+              "gold_topic": "acces",
+              "ranked_ids": [
+                "acces-train-10",
+                "acces-train-07",
+                "acces-train-04"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "acces-test-03",
+              "gold_topic": "acces",
+              "ranked_ids": [
+                "acces-train-02",
+                "acces-train-10",
+                "deploiement-train-02"
+              ],
+              "precision_at_3": 0.6666666666666666,
+              "recall_at_3": 0.16666666666666666,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "acces-test-04",
+              "gold_topic": "acces",
+              "ranked_ids": [
+                "acces-train-05",
+                "acces-train-03",
+                "acces-train-12"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            }
+          ],
+          "precision_at_3": 0.9166666666666665,
+          "recall_at_3": 0.22916666666666663,
+          "mrr_at_3": 1.0
+        },
+        "supervised_nca": {
+          "dimension": 8,
+          "cases": [
+            {
+              "id": "deploiement-test-01",
+              "gold_topic": "deploiement",
+              "ranked_ids": [
+                "deploiement-train-03",
+                "deploiement-train-07",
+                "deploiement-train-04"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "deploiement-test-02",
+              "gold_topic": "deploiement",
+              "ranked_ids": [
+                "deploiement-train-01",
+                "deploiement-train-06",
+                "deploiement-train-12"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "deploiement-test-03",
+              "gold_topic": "deploiement",
+              "ranked_ids": [
+                "deploiement-train-03",
+                "deploiement-train-04",
+                "deploiement-train-05"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "deploiement-test-04",
+              "gold_topic": "deploiement",
+              "ranked_ids": [
+                "deploiement-train-10",
+                "deploiement-train-08",
+                "deploiement-train-02"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "performance-test-01",
+              "gold_topic": "performance",
+              "ranked_ids": [
+                "performance-train-03",
+                "performance-train-04",
+                "performance-train-11"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "performance-test-02",
+              "gold_topic": "performance",
+              "ranked_ids": [
+                "performance-train-03",
+                "performance-train-11",
+                "performance-train-06"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "performance-test-03",
+              "gold_topic": "performance",
+              "ranked_ids": [
+                "performance-train-01",
+                "performance-train-10",
+                "performance-train-08"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "performance-test-04",
+              "gold_topic": "performance",
+              "ranked_ids": [
+                "performance-train-01",
+                "performance-train-10",
+                "performance-train-12"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "acces-test-01",
+              "gold_topic": "acces",
+              "ranked_ids": [
+                "acces-train-01",
+                "acces-train-06",
+                "acces-train-07"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "acces-test-02",
+              "gold_topic": "acces",
+              "ranked_ids": [
+                "acces-train-04",
+                "acces-train-10",
+                "acces-train-03"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "acces-test-03",
+              "gold_topic": "acces",
+              "ranked_ids": [
+                "acces-train-04",
+                "acces-train-03",
+                "acces-train-10"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            },
+            {
+              "id": "acces-test-04",
+              "gold_topic": "acces",
+              "ranked_ids": [
+                "acces-train-12",
+                "acces-train-03",
+                "acces-train-05"
+              ],
+              "precision_at_3": 1.0,
+              "recall_at_3": 0.25,
+              "mrr_at_3": 1.0
+            }
+          ],
+          "precision_at_3": 1.0,
+          "recall_at_3": 0.25,
+          "mrr_at_3": 1.0
+        }
+      }
+    },
+    "training": {
+      "iterations": 2,
+      "warnings": [],
+      "train_hash": "73a5f4500a0655a2c418b26aa071a369eb772336921e551edfa923e8b9207259",
+      "feature_hash": "517e6fc708470532a554938ddb469a69f44b59c4ec1fdf2bc9411eabc1ec56e4"
+    },
+    "method": "supervised NCA on train TF-IDF; no pretrained neural model"
+  },
+  "dataset_hash": "c4b644497baaa916c7435e297725a77f987c1da8bd3d238f2f41693c33f3095d",
+  "scope": "fictional local corpus; trained algorithms, no production quality claim or external action"
+}

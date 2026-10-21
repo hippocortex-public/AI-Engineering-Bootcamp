@@ -1,0 +1,7 @@
+flowchart TD
+ A["Estimation maximale"] --> B{"Budget disponible ?"}
+ B -->|non| C["Admission refusée"]
+ B -->|oui| D["Réservation"]
+ D --> E["Appel borné"]
+ E --> F["Règlement et libération"]
+ F --> G["Coût par résultat utile"]

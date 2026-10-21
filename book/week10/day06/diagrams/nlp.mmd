@@ -1,0 +1,7 @@
+flowchart TD
+ A["TF-IDF fit sur train"] --> B["Matrice train et labels"]
+ B --> C["Projection NCA apprise"]
+ C --> D["Index train projeté"]
+ E["Requêtes test transformées"] --> F["Classement cosinus"]
+ D --> F
+ F --> G["Métriques par thème"]

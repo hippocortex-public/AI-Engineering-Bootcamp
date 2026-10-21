@@ -1,0 +1,113 @@
+{
+  "records": [
+    {
+      "id": "e1",
+      "summary": "Kafka accumule des événements. Contact : alice@example.invalid.",
+      "sentences": [
+        {
+          "start": 96,
+          "end": 126,
+          "text": "Kafka accumule des événements.",
+          "score": 0.49999999999999983
+        },
+        {
+          "start": 127,
+          "end": 159,
+          "text": "Contact : alice@example.invalid.",
+          "score": 0.49999999999999983
+        }
+      ],
+      "word_count": 7,
+      "status": "extract",
+      "method": "TF-IDF sentence/centroid, extractive",
+      "reference_overlap": {
+        "precision": 0.5,
+        "recall": 0.23529411764705882,
+        "f1": 0.31999999999999995,
+        "note": "token multiset overlap, not factuality or ROUGE"
+      }
+    },
+    {
+      "id": "e2",
+      "summary": "INC-305 concerne Catalogue API en recette. Le correctif sera vérifié dans PostgreSQL.",
+      "sentences": [
+        {
+          "start": 0,
+          "end": 42,
+          "text": "INC-305 concerne Catalogue API en recette.",
+          "score": 0.5773502691896257
+        },
+        {
+          "start": 99,
+          "end": 141,
+          "text": "Le correctif sera vérifié dans PostgreSQL.",
+          "score": 0.5773502691896258
+        }
+      ],
+      "word_count": 12,
+      "status": "extract",
+      "method": "TF-IDF sentence/centroid, extractive",
+      "reference_overlap": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "note": "token multiset overlap, not factuality or ROUGE"
+      }
+    },
+    {
+      "id": "e3",
+      "summary": "Le compte reçoit HTTP 401. Le jeton a expiré.",
+      "sentences": [
+        {
+          "start": 45,
+          "end": 71,
+          "text": "Le compte reçoit HTTP 401.",
+          "score": 0.5361948501972854
+        },
+        {
+          "start": 72,
+          "end": 90,
+          "text": "Le jeton a expiré.",
+          "score": 0.5361948501972855
+        }
+      ],
+      "word_count": 9,
+      "status": "extract",
+      "method": "TF-IDF sentence/centroid, extractive",
+      "reference_overlap": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "note": "token multiset overlap, not factuality or ROUGE"
+      }
+    },
+    {
+      "id": "e4",
+      "summary": "INC-507 concerne Catalogue API en dev. La latence est de 100 ms puis la latence de 200 ms.",
+      "sentences": [
+        {
+          "start": 0,
+          "end": 38,
+          "text": "INC-507 concerne Catalogue API en dev.",
+          "score": 0.5773502691896258
+        },
+        {
+          "start": 80,
+          "end": 131,
+          "text": "La latence est de 100 ms puis la latence de 200 ms.",
+          "score": 0.5773502691896261
+        }
+      ],
+      "word_count": 18,
+      "status": "extract",
+      "method": "TF-IDF sentence/centroid, extractive",
+      "reference_overlap": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "note": "token multiset overlap, not factuality or ROUGE"
+      }
+    }
+  ],
+  "note": "Extractive, no LLM generation; sentence selection is not a factuality evaluation"
+}

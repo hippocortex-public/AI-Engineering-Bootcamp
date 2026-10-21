@@ -1,0 +1,66 @@
+[
+  {
+    "id": "q1",
+    "tenant": "team-a",
+    "question": "Comment rejouer un paiement avec Kafka ?",
+    "relevant": [
+      "kafka-replay"
+    ]
+  },
+  {
+    "id": "q2",
+    "tenant": "team-a",
+    "question": "Quel TTL pour le cache Redis des livres ?",
+    "relevant": [
+      "redis-cache"
+    ]
+  },
+  {
+    "id": "q3",
+    "tenant": "team-a",
+    "question": "Comment libérer le verrou selon le jeton du propriétaire ?",
+    "relevant": [
+      "redis-lock"
+    ]
+  },
+  {
+    "id": "q4",
+    "tenant": "team-a",
+    "question": "Comment corréler les traces et les journaux ?",
+    "relevant": [
+      "otel-traces"
+    ]
+  },
+  {
+    "id": "q5",
+    "tenant": "team-a",
+    "question": "Comment vérifier une restauration PostgreSQL ?",
+    "relevant": [
+      "postgres-backup"
+    ]
+  },
+  {
+    "id": "q6",
+    "tenant": "team-a",
+    "question": "Comment filtrer le tenant avant de sélectionner les passages ?",
+    "relevant": [
+      "rag-acl"
+    ]
+  },
+  {
+    "id": "q7",
+    "tenant": "team-a",
+    "question": "Quel quota pour le fournisseur et ses appels ?",
+    "relevant": [
+      "kafka-rate"
+    ]
+  },
+  {
+    "id": "q8",
+    "tenant": "team-a",
+    "question": "Retenter un encaissement depuis le journal distribué",
+    "relevant": [
+      "kafka-replay"
+    ]
+  }
+]

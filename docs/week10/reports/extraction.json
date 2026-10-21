@@ -1,0 +1,266 @@
+{
+  "records": [
+    {
+      "id": "e1",
+      "fields": {
+        "ticket_id": {
+          "status": "present",
+          "value": "INC-204",
+          "evidence": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "INC-204",
+              "value": "INC-204"
+            }
+          ]
+        },
+        "environment": {
+          "status": "present",
+          "value": "prod",
+          "evidence": [
+            {
+              "start": 33,
+              "end": 37,
+              "text": "prod",
+              "value": "prod"
+            }
+          ]
+        },
+        "http_status": {
+          "status": "present",
+          "value": 503,
+          "evidence": [
+            {
+              "start": 86,
+              "end": 94,
+              "text": "HTTP 503",
+              "value": 503
+            }
+          ]
+        },
+        "duration_ms": {
+          "status": "present",
+          "value": "1500",
+          "evidence": [
+            {
+              "start": 42,
+              "end": 62,
+              "text": "latence est de 1,5 s",
+              "value": "1500"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ticket_id": "INC-204",
+        "environment": "prod",
+        "http_status": 503,
+        "duration_ms": "1500"
+      },
+      "expected_status": {
+        "ticket_id": "present",
+        "environment": "present",
+        "http_status": "present",
+        "duration_ms": "present"
+      }
+    },
+    {
+      "id": "e2",
+      "fields": {
+        "ticket_id": {
+          "status": "present",
+          "value": "INC-305",
+          "evidence": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "INC-305",
+              "value": "INC-305"
+            }
+          ]
+        },
+        "environment": {
+          "status": "present",
+          "value": "recette",
+          "evidence": [
+            {
+              "start": 34,
+              "end": 41,
+              "text": "recette",
+              "value": "recette"
+            }
+          ]
+        },
+        "http_status": {
+          "status": "missing",
+          "value": null,
+          "evidence": []
+        },
+        "duration_ms": {
+          "status": "present",
+          "value": "250",
+          "evidence": [
+            {
+              "start": 80,
+              "end": 97,
+              "text": "latence de 250 ms",
+              "value": "250"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ticket_id": "INC-305",
+        "environment": "recette",
+        "http_status": null,
+        "duration_ms": "250"
+      },
+      "expected_status": {
+        "ticket_id": "present",
+        "environment": "present",
+        "http_status": "missing",
+        "duration_ms": "present"
+      }
+    },
+    {
+      "id": "e3",
+      "fields": {
+        "ticket_id": {
+          "status": "present",
+          "value": "INC-406",
+          "evidence": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "INC-406",
+              "value": "INC-406"
+            }
+          ]
+        },
+        "environment": {
+          "status": "present",
+          "value": "prod",
+          "evidence": [
+            {
+              "start": 33,
+              "end": 43,
+              "text": "production",
+              "value": "prod"
+            }
+          ]
+        },
+        "http_status": {
+          "status": "present",
+          "value": 401,
+          "evidence": [
+            {
+              "start": 62,
+              "end": 70,
+              "text": "HTTP 401",
+              "value": 401
+            }
+          ]
+        },
+        "duration_ms": {
+          "status": "missing",
+          "value": null,
+          "evidence": []
+        }
+      },
+      "expected": {
+        "ticket_id": "INC-406",
+        "environment": "prod",
+        "http_status": 401,
+        "duration_ms": null
+      },
+      "expected_status": {
+        "ticket_id": "present",
+        "environment": "present",
+        "http_status": "present",
+        "duration_ms": "missing"
+      }
+    },
+    {
+      "id": "e4",
+      "fields": {
+        "ticket_id": {
+          "status": "present",
+          "value": "INC-507",
+          "evidence": [
+            {
+              "start": 0,
+              "end": 7,
+              "text": "INC-507",
+              "value": "INC-507"
+            }
+          ]
+        },
+        "environment": {
+          "status": "present",
+          "value": "dev",
+          "evidence": [
+            {
+              "start": 34,
+              "end": 37,
+              "text": "dev",
+              "value": "dev"
+            }
+          ]
+        },
+        "http_status": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [
+            {
+              "start": 58,
+              "end": 66,
+              "text": "HTTP 401",
+              "value": 401
+            },
+            {
+              "start": 70,
+              "end": 78,
+              "text": "HTTP 503",
+              "value": 503
+            }
+          ]
+        },
+        "duration_ms": {
+          "status": "ambiguous",
+          "value": null,
+          "evidence": [
+            {
+              "start": 83,
+              "end": 104,
+              "text": "latence est de 100 ms",
+              "value": "100"
+            },
+            {
+              "start": 113,
+              "end": 130,
+              "text": "latence de 200 ms",
+              "value": "200"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "ticket_id": "INC-507",
+        "environment": "dev",
+        "http_status": null,
+        "duration_ms": null
+      },
+      "expected_status": {
+        "ticket_id": "present",
+        "environment": "present",
+        "http_status": "ambiguous",
+        "duration_ms": "ambiguous"
+      }
+    }
+  ],
+  "value_matches": 16,
+  "status_matches": 16,
+  "field_count": 16,
+  "note": "Exact values on fictional examples; inspect ambiguous/missing statuses separately"
+}

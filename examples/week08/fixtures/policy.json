@@ -1,0 +1,9 @@
+{
+  "minimum_quality": 0.8,
+  "max_p95_ms": 1000,
+  "max_error_rate": 0.05,
+  "max_usd_per_success": "0.01",
+  "reviewers": [
+    "reviewer-demo"
+  ]
+}

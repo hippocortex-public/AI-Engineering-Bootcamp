@@ -1,0 +1,58 @@
+[
+  {
+    "doc_id": "kafka-replay",
+    "tenant": "team-a",
+    "version": 1,
+    "title": "Rejeu de paiement avec Kafka",
+    "source": "kafka-replay.md"
+  },
+  {
+    "doc_id": "kafka-rate",
+    "tenant": "team-a",
+    "version": 1,
+    "title": "Limiter le débit du fournisseur",
+    "source": "kafka-rate.md"
+  },
+  {
+    "doc_id": "redis-cache",
+    "tenant": "team-a",
+    "version": 1,
+    "title": "Expiration du cache Redis",
+    "source": "redis-cache.md"
+  },
+  {
+    "doc_id": "redis-lock",
+    "tenant": "team-a",
+    "version": 1,
+    "title": "Verrou Redis et propriétaire",
+    "source": "redis-lock.md"
+  },
+  {
+    "doc_id": "otel-traces",
+    "tenant": "team-a",
+    "version": 1,
+    "title": "Corrélation des traces et journaux",
+    "source": "otel-traces.md"
+  },
+  {
+    "doc_id": "postgres-backup",
+    "tenant": "team-a",
+    "version": 1,
+    "title": "Sauvegarde et restauration PostgreSQL",
+    "source": "postgres-backup.md"
+  },
+  {
+    "doc_id": "rag-acl",
+    "tenant": "team-a",
+    "version": 1,
+    "title": "Périmètre documentaire et citations",
+    "source": "rag-acl.md"
+  },
+  {
+    "doc_id": "private-payment",
+    "tenant": "team-b",
+    "version": 1,
+    "title": "Paiement réservé à une autre équipe",
+    "source": "private-payment.md"
+  }
+]

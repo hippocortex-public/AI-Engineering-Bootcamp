@@ -1,0 +1,6 @@
+{
+  "documents": 8,
+  "chunks": 25,
+  "embedding": "hashbow-sha256-v1:dim=128:tokens=nfkd-stop-v1",
+  "storage": "SQLite + exact scan Python"
+}

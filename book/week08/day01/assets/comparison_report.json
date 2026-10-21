@@ -1,0 +1,11 @@
+{
+  "delta": 0.08333333333333326,
+  "regressions": [
+    "c09"
+  ],
+  "improvements": [
+    "c03",
+    "c04"
+  ],
+  "candidate_accepted": false
+}

@@ -1,0 +1,7 @@
+flowchart TD
+  A["Réception n8n"] --> B["Jobs durables"]
+  C["Scheduler n8n"] --> D["Génération et contrôles"]
+  B --> D
+  D --> E["Attente humaine"]
+  F["Décision n8n"] --> E
+  E --> G["Publication locale ou refus"]

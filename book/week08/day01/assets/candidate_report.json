@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "dataset_hash": "6ce98738a42c5abcb0bda497002ac7920a1c2c19b007ad06a6ed982ed78ecb78",
+  "predictions_hash": "59fe46663159bd5013bf2189da12d7faf6e9496e6a4e29bcc56386cfdfa89030",
+  "rubric_hash": "c6096521ec2627e1966d62895f7ef0898e191b267f15e6dd755cce2c16f697ea",
+  "rubric": {
+    "version": "1.0",
+    "answer": "all phrases with word boundaries",
+    "json": "strict canonical equality",
+    "tool": "strict name and arguments",
+    "refusal": "strict decision and reason",
+    "minimum": 0.8,
+    "critical": "all pass"
+  },
+  "cases": [
+    {
+      "id": "c01",
+      "category": "support",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c02",
+      "category": "support",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c03",
+      "category": "support",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c04",
+      "category": "support",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c05",
+      "category": "structure",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c06",
+      "category": "structure",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c07",
+      "category": "tools",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c08",
+      "category": "tools",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c09",
+      "category": "security",
+      "critical": true,
+      "present": true,
+      "passed": false
+    },
+    {
+      "id": "c10",
+      "category": "security",
+      "critical": true,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c11",
+      "category": "support",
+      "critical": false,
+      "present": true,
+      "passed": true
+    },
+    {
+      "id": "c12",
+      "category": "structure",
+      "critical": false,
+      "present": true,
+      "passed": true
+    }
+  ],
+  "segments": {
+    "security": {
+      "passed": 1,
+      "total": 2,
+      "rate": 0.5
+    },
+    "structure": {
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    "support": {
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    "tools": {
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    }
+  },
+  "rate": 0.9166666666666666,
+  "macro_rate": 0.875,
+  "coverage": 1.0,
+  "critical_ok": false,
+  "accepted": false
+}

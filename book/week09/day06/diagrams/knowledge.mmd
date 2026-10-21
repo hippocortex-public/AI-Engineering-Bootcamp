@@ -1,0 +1,7 @@
+flowchart TD
+ A["Note explicitement écrite"] --> B["Tenant, utilisateur, session"]
+ B --> C["Date d’expiration"]
+ C --> D{"Source encore courante ?"}
+ D -->|oui ou sans source| E["Récupération de note"]
+ D -->|non| F["Note masquée"]
+ G["Oubli ou suppression source"] --> H["Suppression dans le store"]

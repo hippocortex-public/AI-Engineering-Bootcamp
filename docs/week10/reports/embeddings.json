@@ -1,0 +1,320 @@
+{
+  "retrieval": {
+    "queries": 12,
+    "index_documents": 36,
+    "relevance": "same topic label proxy, not human semantic qrels",
+    "modes": {
+      "tfidf": {
+        "dimension": 441,
+        "cases": [
+          {
+            "id": "deploiement-test-01",
+            "gold_topic": "deploiement",
+            "ranked_ids": [
+              "deploiement-train-07",
+              "deploiement-train-03",
+              "deploiement-train-02"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "deploiement-test-02",
+            "gold_topic": "deploiement",
+            "ranked_ids": [
+              "deploiement-train-08",
+              "deploiement-train-06",
+              "deploiement-train-01"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "deploiement-test-03",
+            "gold_topic": "deploiement",
+            "ranked_ids": [
+              "deploiement-train-04",
+              "deploiement-train-11",
+              "deploiement-train-07"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "deploiement-test-04",
+            "gold_topic": "deploiement",
+            "ranked_ids": [
+              "deploiement-train-02",
+              "deploiement-train-05",
+              "deploiement-train-10"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "performance-test-01",
+            "gold_topic": "performance",
+            "ranked_ids": [
+              "performance-train-04",
+              "performance-train-07",
+              "acces-train-08"
+            ],
+            "precision_at_3": 0.6666666666666666,
+            "recall_at_3": 0.16666666666666666,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "performance-test-02",
+            "gold_topic": "performance",
+            "ranked_ids": [
+              "performance-train-01",
+              "performance-train-06",
+              "acces-train-01"
+            ],
+            "precision_at_3": 0.6666666666666666,
+            "recall_at_3": 0.16666666666666666,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "performance-test-03",
+            "gold_topic": "performance",
+            "ranked_ids": [
+              "performance-train-12",
+              "performance-train-03",
+              "performance-train-11"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "performance-test-04",
+            "gold_topic": "performance",
+            "ranked_ids": [
+              "performance-train-10",
+              "performance-train-02",
+              "performance-train-08"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "acces-test-01",
+            "gold_topic": "acces",
+            "ranked_ids": [
+              "acces-train-01",
+              "acces-train-03",
+              "acces-train-08"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "acces-test-02",
+            "gold_topic": "acces",
+            "ranked_ids": [
+              "acces-train-10",
+              "acces-train-07",
+              "acces-train-04"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "acces-test-03",
+            "gold_topic": "acces",
+            "ranked_ids": [
+              "acces-train-02",
+              "acces-train-10",
+              "deploiement-train-02"
+            ],
+            "precision_at_3": 0.6666666666666666,
+            "recall_at_3": 0.16666666666666666,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "acces-test-04",
+            "gold_topic": "acces",
+            "ranked_ids": [
+              "acces-train-05",
+              "acces-train-03",
+              "acces-train-12"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          }
+        ],
+        "precision_at_3": 0.9166666666666665,
+        "recall_at_3": 0.22916666666666663,
+        "mrr_at_3": 1.0
+      },
+      "supervised_nca": {
+        "dimension": 8,
+        "cases": [
+          {
+            "id": "deploiement-test-01",
+            "gold_topic": "deploiement",
+            "ranked_ids": [
+              "deploiement-train-03",
+              "deploiement-train-07",
+              "deploiement-train-04"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "deploiement-test-02",
+            "gold_topic": "deploiement",
+            "ranked_ids": [
+              "deploiement-train-01",
+              "deploiement-train-06",
+              "deploiement-train-12"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "deploiement-test-03",
+            "gold_topic": "deploiement",
+            "ranked_ids": [
+              "deploiement-train-03",
+              "deploiement-train-04",
+              "deploiement-train-05"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "deploiement-test-04",
+            "gold_topic": "deploiement",
+            "ranked_ids": [
+              "deploiement-train-10",
+              "deploiement-train-08",
+              "deploiement-train-02"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "performance-test-01",
+            "gold_topic": "performance",
+            "ranked_ids": [
+              "performance-train-03",
+              "performance-train-04",
+              "performance-train-11"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "performance-test-02",
+            "gold_topic": "performance",
+            "ranked_ids": [
+              "performance-train-03",
+              "performance-train-11",
+              "performance-train-06"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "performance-test-03",
+            "gold_topic": "performance",
+            "ranked_ids": [
+              "performance-train-01",
+              "performance-train-10",
+              "performance-train-08"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "performance-test-04",
+            "gold_topic": "performance",
+            "ranked_ids": [
+              "performance-train-01",
+              "performance-train-10",
+              "performance-train-12"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "acces-test-01",
+            "gold_topic": "acces",
+            "ranked_ids": [
+              "acces-train-01",
+              "acces-train-06",
+              "acces-train-07"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "acces-test-02",
+            "gold_topic": "acces",
+            "ranked_ids": [
+              "acces-train-04",
+              "acces-train-10",
+              "acces-train-03"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "acces-test-03",
+            "gold_topic": "acces",
+            "ranked_ids": [
+              "acces-train-04",
+              "acces-train-03",
+              "acces-train-10"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          },
+          {
+            "id": "acces-test-04",
+            "gold_topic": "acces",
+            "ranked_ids": [
+              "acces-train-12",
+              "acces-train-03",
+              "acces-train-05"
+            ],
+            "precision_at_3": 1.0,
+            "recall_at_3": 0.25,
+            "mrr_at_3": 1.0
+          }
+        ],
+        "precision_at_3": 1.0,
+        "recall_at_3": 0.25,
+        "mrr_at_3": 1.0
+      }
+    }
+  },
+  "training": {
+    "iterations": 2,
+    "warnings": [],
+    "train_hash": "73a5f4500a0655a2c418b26aa071a369eb772336921e551edfa923e8b9207259",
+    "feature_hash": "517e6fc708470532a554938ddb469a69f44b59c4ec1fdf2bc9411eabc1ec56e4"
+  },
+  "method": "supervised NCA on train TF-IDF; no pretrained neural model"
+}

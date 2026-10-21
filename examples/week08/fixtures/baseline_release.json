@@ -1,0 +1,10 @@
+{
+  "release_id": "s8-baseline",
+  "owner": "engineer-demo",
+  "reviewer": "reviewer-demo",
+  "approved": true,
+  "config_hash": "53bab84324ea9039be814650886408084b70f5961e87112e00fd6dc4d792f016",
+  "valid_until": "2026-11-20",
+  "risk_review": "synthetic-review-001",
+  "rollback_ref": "release-previous-synthetic"
+}

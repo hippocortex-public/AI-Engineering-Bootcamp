@@ -1,0 +1,8 @@
+flowchart TD
+ A["Texte non fiable"] --> B["Proposition de l’agent"]
+ C["Identité et ressource serveur"] --> D["Contrôle de permissions"]
+ B --> D
+ E["Grant de confiance"] --> D
+ D --> F{"Action autorisée ?"}
+ F -->|non| G["Refus avant effet"]
+ F -->|oui| H["Exécution hors du lab"]

@@ -1,0 +1,7 @@
+flowchart TD
+ A["Document courant"] --> B["Encodage validé"]
+ B --> C["Transaction de remplacement"]
+ C --> D["SQLite persistant"]
+ E["Tenant autorisé"] --> F["Filtre SQL"]
+ D --> F
+ F --> G["Scan exact puis top-k"]

@@ -1,0 +1,8 @@
+flowchart TD
+ A["Dataset et groupes"] --> B["Train : vocabulaire et tête"]
+ A --> C["Adaptation : poids seuls"]
+ A --> D["Validation : sélection"]
+ B --> C
+ C --> D
+ D --> E["Test après sélection"]
+ E --> F["Métriques et limites"]

@@ -1,0 +1,5 @@
+flowchart TD
+  A["Webhook n8n"] --> B["Adaptateur HTTP"]
+  B --> C["Validation backend"]
+  C --> D["Job durable"]
+  C --> E["Réponse 202 ou 200"]

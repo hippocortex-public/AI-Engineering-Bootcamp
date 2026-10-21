@@ -1,0 +1,26 @@
+{
+  "status": "supported_extract",
+  "answer": "[1] Pour rejouer un paiement avec Kafka dans ce laboratoire, conserver les événements et les offsets du groupe consommateur. Le rejeu relit les événements du topic, puis applique un contrôle d’idempotence sur payment_id avant l’appel au fournisseur.\n\n[2] Réinitialiser les offsets ne garantit pas l’unicité de l’effet externe. Si le fournisseur accepte une clé d’idempotence, réutiliser une clé stable pour le paiement. Sinon, prévoir une réconciliation avant de rejouer une opération incertaine.",
+  "citations": [
+    {
+      "chunk_id": "887747bebc1e404a9d8e858f",
+      "doc_id": "kafka-replay",
+      "version": 1,
+      "start": 32,
+      "end": 277,
+      "text": "Pour rejouer un paiement avec Kafka dans ce laboratoire, conserver les événements et les offsets du groupe consommateur. Le rejeu relit les événements du topic, puis applique un contrôle d’idempotence sur payment_id avant l’appel au fournisseur.",
+      "source": "kafka-replay.md"
+    },
+    {
+      "chunk_id": "759fd94dd8cce64db6fb6d99",
+      "doc_id": "kafka-replay",
+      "version": 1,
+      "start": 279,
+      "end": 520,
+      "text": "Réinitialiser les offsets ne garantit pas l’unicité de l’effet externe. Si le fournisseur accepte une clé d’idempotence, réutiliser une clé stable pour le paiement. Sinon, prévoir une réconciliation avant de rejouer une opération incertaine.",
+      "source": "kafka-replay.md"
+    }
+  ],
+  "mode": "extractive; no LLM",
+  "note": "Passages reproduits, pas une synthèse générative ni une preuve de justesse du document"
+}

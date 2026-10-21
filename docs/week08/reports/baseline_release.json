@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "day": "2026-10-20",
+  "release_id": "s8-baseline",
+  "checks": {
+    "quality": true,
+    "performance": true,
+    "cost": true,
+    "governance": true,
+    "security": true
+  },
+  "accepted": true,
+  "failed_checks": [],
+  "quality": {
+    "rate": 0.8333333333333334,
+    "coverage": 1.0,
+    "critical_ok": true
+  },
+  "benchmark": {
+    "count": 36,
+    "p50_ms": 518,
+    "p95_ms": 601,
+    "max_ms": 609,
+    "technical_error_rate": 0.0,
+    "sequential_throughput_rps": 1.9286403085824493,
+    "human_wait_p95_ms": 12000,
+    "method": "synthetic sequential replay; nearest-rank; errors included",
+    "dataset_hash": "6ce98738a42c5abcb0bda497002ac7920a1c2c19b007ad06a6ed982ed78ecb78",
+    "workload_hash": "250de439cbca2a55729f2d3d3f8c72a9c7640d140c6d50195f341b2a6719eb2e",
+    "config_hash": "53bab84324ea9039be814650886408084b70f5961e87112e00fd6dc4d792f016",
+    "runs_hash": "521cf215f1422f4cb56e9a7a1bd690a614ed9e69617818866f0ec182b4107fa1"
+  },
+  "cost": {
+    "currency": "USD",
+    "price_kind": "synthetic",
+    "total_usd": "0.06084",
+    "successful_attempts": 30,
+    "usd_per_success": "0.002028",
+    "attempt_count": 36,
+    "prices_hash": "6672169a4b22b28daef1ab6227b06409fc339cbc745d4b2347b9d7a418b775e6",
+    "runs_hash": "521cf215f1422f4cb56e9a7a1bd690a614ed9e69617818866f0ec182b4107fa1"
+  },
+  "governance": {
+    "accepted": true,
+    "reasons": [],
+    "manifest_hash": "3905fc4b986adda7a7956c2e655e020e93e94f23e4b8e4c5ce41f103bc1a393f"
+  },
+  "security": {
+    "count": 8,
+    "passed": true,
+    "cases": [
+      {
+        "id": "allowed-read",
+        "passed": true,
+        "allowed": true,
+        "reason": "read_granted"
+      },
+      {
+        "id": "allowed-approved-publication",
+        "passed": true,
+        "allowed": true,
+        "reason": "bound_approval"
+      },
+      {
+        "id": "cross-tenant",
+        "passed": true,
+        "allowed": false,
+        "reason": "tenant_mismatch"
+      },
+      {
+        "id": "unknown-tool",
+        "passed": true,
+        "allowed": false,
+        "reason": "unknown_tool"
+      },
+      {
+        "id": "no-approval",
+        "passed": true,
+        "allowed": false,
+        "reason": "insufficient_permission"
+      },
+      {
+        "id": "wrong-role",
+        "passed": true,
+        "allowed": false,
+        "reason": "insufficient_permission"
+      },
+      {
+        "id": "changed-action",
+        "passed": true,
+        "allowed": false,
+        "reason": "insufficient_permission"
+      },
+      {
+        "id": "unexpected-argument",
+        "passed": true,
+        "allowed": false,
+        "reason": "invalid_arguments"
+      }
+    ],
+    "suite_hash": "09d1d19c59d71843c8027bf18ff1e7d7e1c85c3423938b8dbfe64ccd22cc2d9d",
+    "note": "Tests du contrôleur de permissions, aucun modèle ni outil réel"
+  },
+  "evidence_hash": "3d82e64e8b1d6976bd8f9ac9522cbc28f551e590e8121948712db33c1aca1249",
+  "scope": "synthetic local evidence; no production authorization or deployment"
+}

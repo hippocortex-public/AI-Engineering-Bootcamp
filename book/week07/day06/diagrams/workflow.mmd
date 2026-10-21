@@ -1,0 +1,7 @@
+flowchart TD
+  A["Brouillon et empreinte"] --> B["Relecteur autorisé"]
+  B --> C{"Garde valide ?"}
+  C -->|non| D["Conflit ou refus d’accès"]
+  C -->|oui| E{"Décision"}
+  E -->|approve| F["Publication simulée"]
+  E -->|reject| G["État rejected"]

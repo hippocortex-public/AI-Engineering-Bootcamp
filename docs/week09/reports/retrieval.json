@@ -1,0 +1,439 @@
+{
+  "queries": 8,
+  "k": 3,
+  "summaries": {
+    "lexical": {
+      "recall_at_k": 0.875,
+      "mrr_at_k": 0.875,
+      "ndcg_at_k": 0.875
+    },
+    "vector": {
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.9166666666666666,
+      "ndcg_at_k": 0.9375
+    },
+    "hybrid": {
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.9166666666666666,
+      "ndcg_at_k": 0.9375
+    },
+    "reranked": {
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.9166666666666666,
+      "ndcg_at_k": 0.9375
+    }
+  },
+  "cases": [
+    {
+      "query_id": "q1",
+      "mode": "lexical",
+      "ranked_docs": [
+        "kafka-replay",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q1",
+      "mode": "vector",
+      "ranked_docs": [
+        "kafka-replay"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q1",
+      "mode": "hybrid",
+      "ranked_docs": [
+        "kafka-replay",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q1",
+      "mode": "reranked",
+      "ranked_docs": [
+        "kafka-replay",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q2",
+      "mode": "lexical",
+      "ranked_docs": [
+        "redis-cache",
+        "redis-lock"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q2",
+      "mode": "vector",
+      "ranked_docs": [
+        "redis-cache",
+        "postgres-backup",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q2",
+      "mode": "hybrid",
+      "ranked_docs": [
+        "redis-cache",
+        "redis-lock",
+        "postgres-backup"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q2",
+      "mode": "reranked",
+      "ranked_docs": [
+        "redis-cache",
+        "redis-lock",
+        "postgres-backup"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q3",
+      "mode": "lexical",
+      "ranked_docs": [
+        "redis-lock"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q3",
+      "mode": "vector",
+      "ranked_docs": [
+        "redis-lock",
+        "otel-traces",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q3",
+      "mode": "hybrid",
+      "ranked_docs": [
+        "redis-lock",
+        "otel-traces",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q3",
+      "mode": "reranked",
+      "ranked_docs": [
+        "redis-lock",
+        "otel-traces",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q4",
+      "mode": "lexical",
+      "ranked_docs": [
+        "otel-traces"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q4",
+      "mode": "vector",
+      "ranked_docs": [
+        "otel-traces",
+        "postgres-backup",
+        "redis-lock"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q4",
+      "mode": "hybrid",
+      "ranked_docs": [
+        "otel-traces",
+        "postgres-backup",
+        "redis-lock"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q4",
+      "mode": "reranked",
+      "ranked_docs": [
+        "otel-traces",
+        "postgres-backup",
+        "redis-lock"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q5",
+      "mode": "lexical",
+      "ranked_docs": [
+        "postgres-backup",
+        "redis-cache"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q5",
+      "mode": "vector",
+      "ranked_docs": [
+        "postgres-backup",
+        "redis-cache",
+        "otel-traces"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q5",
+      "mode": "hybrid",
+      "ranked_docs": [
+        "postgres-backup",
+        "redis-cache",
+        "otel-traces"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q5",
+      "mode": "reranked",
+      "ranked_docs": [
+        "postgres-backup",
+        "redis-cache",
+        "otel-traces"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q6",
+      "mode": "lexical",
+      "ranked_docs": [
+        "rag-acl",
+        "postgres-backup",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q6",
+      "mode": "vector",
+      "ranked_docs": [
+        "rag-acl",
+        "kafka-replay",
+        "postgres-backup"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q6",
+      "mode": "hybrid",
+      "ranked_docs": [
+        "rag-acl",
+        "postgres-backup",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q6",
+      "mode": "reranked",
+      "ranked_docs": [
+        "rag-acl",
+        "postgres-backup",
+        "kafka-rate"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q7",
+      "mode": "lexical",
+      "ranked_docs": [
+        "kafka-rate",
+        "kafka-replay"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q7",
+      "mode": "vector",
+      "ranked_docs": [
+        "kafka-rate",
+        "kafka-replay"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q7",
+      "mode": "hybrid",
+      "ranked_docs": [
+        "kafka-rate",
+        "kafka-replay"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q7",
+      "mode": "reranked",
+      "ranked_docs": [
+        "kafka-rate",
+        "kafka-replay"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 1.0,
+      "ndcg_at_k": 1.0,
+      "k": 3
+    },
+    {
+      "query_id": "q8",
+      "mode": "lexical",
+      "ranked_docs": [],
+      "recall_at_k": 0.0,
+      "mrr_at_k": 0.0,
+      "ndcg_at_k": 0.0,
+      "k": 3
+    },
+    {
+      "query_id": "q8",
+      "mode": "vector",
+      "ranked_docs": [
+        "otel-traces",
+        "kafka-rate",
+        "kafka-replay"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.3333333333333333,
+      "ndcg_at_k": 0.5,
+      "k": 3
+    },
+    {
+      "query_id": "q8",
+      "mode": "hybrid",
+      "ranked_docs": [
+        "otel-traces",
+        "kafka-rate",
+        "kafka-replay"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.3333333333333333,
+      "ndcg_at_k": 0.5,
+      "k": 3
+    },
+    {
+      "query_id": "q8",
+      "mode": "reranked",
+      "ranked_docs": [
+        "otel-traces",
+        "kafka-rate",
+        "kafka-replay"
+      ],
+      "recall_at_k": 1.0,
+      "mrr_at_k": 0.3333333333333333,
+      "ndcg_at_k": 0.5,
+      "k": 3
+    }
+  ],
+  "unanswerable": [
+    {
+      "id": "u1",
+      "status": "abstain"
+    },
+    {
+      "id": "u2",
+      "status": "abstain"
+    }
+  ],
+  "corpus_hash": "308e049896949fdf0fbfd37e849e54c4d9432731c89bc8068b26c0243ccad06e",
+  "qrels_hash": "d2348c5fc3ce1334dc8b54d2241d04cd5050bb93e8f367de5987e8063ec6713a",
+  "embedding": "hashbow-sha256-v1:dim=128:tokens=nfkd-stop-v1",
+  "scope": "small fictional corpus; no claim of neural semantic quality or production reliability"
+}

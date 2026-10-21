@@ -1,0 +1,7 @@
+flowchart TD
+ A["Passages autorisés"] --> B["BM25"]
+ A --> C["Similarité vectorielle"]
+ B --> D["Rangs de candidats"]
+ C --> D
+ D --> E["Fusion RRF"]
+ E --> F["Top-k et mesure du rappel"]

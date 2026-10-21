@@ -1,0 +1,7 @@
+flowchart TD
+ A["Tentatives corrélées"] --> B["Compteurs par statut"]
+ A --> C["Journaux sans contenu client"]
+ B --> D["Alerte et population"]
+ C --> E["Diagnostic par trace"]
+ D --> E
+ E --> F["Action du runbook"]

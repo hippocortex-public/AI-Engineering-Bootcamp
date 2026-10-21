@@ -1,0 +1,12 @@
+[
+  {
+    "id": "u1",
+    "tenant": "team-a",
+    "question": "Quelle météo demain à Oslo ?"
+  },
+  {
+    "id": "u2",
+    "tenant": "team-a",
+    "question": "Quel est le numéro privé du directeur ?"
+  }
+]

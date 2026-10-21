@@ -1,0 +1,252 @@
+{
+  "selected_epochs": 1,
+  "selection": [
+    {
+      "epochs": 1,
+      "validation_macro_f1": 1.0
+    },
+    {
+      "epochs": 3,
+      "validation_macro_f1": 1.0
+    },
+    {
+      "epochs": 8,
+      "validation_macro_f1": 1.0
+    }
+  ],
+  "baseline": {
+    "count": 12,
+    "labels": [
+      "acces",
+      "deploiement",
+      "performance"
+    ],
+    "accuracy_argmax": 1.0,
+    "macro_f1_argmax": 1.0,
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        4
+      ]
+    ],
+    "threshold": 0.34,
+    "coverage": 1.0,
+    "selective_accuracy": 1.0,
+    "cases": [
+      {
+        "id": "deploiement-test-01",
+        "gold": "deploiement",
+        "predicted": "deploiement",
+        "accepted": true,
+        "max_probability": 0.8833316785093153
+      },
+      {
+        "id": "deploiement-test-02",
+        "gold": "deploiement",
+        "predicted": "deploiement",
+        "accepted": true,
+        "max_probability": 0.7956171744796714
+      },
+      {
+        "id": "deploiement-test-03",
+        "gold": "deploiement",
+        "predicted": "deploiement",
+        "accepted": true,
+        "max_probability": 0.8221263230440552
+      },
+      {
+        "id": "deploiement-test-04",
+        "gold": "deploiement",
+        "predicted": "deploiement",
+        "accepted": true,
+        "max_probability": 0.8473038163654285
+      },
+      {
+        "id": "performance-test-01",
+        "gold": "performance",
+        "predicted": "performance",
+        "accepted": true,
+        "max_probability": 0.5924515840372594
+      },
+      {
+        "id": "performance-test-02",
+        "gold": "performance",
+        "predicted": "performance",
+        "accepted": true,
+        "max_probability": 0.7531116964573009
+      },
+      {
+        "id": "performance-test-03",
+        "gold": "performance",
+        "predicted": "performance",
+        "accepted": true,
+        "max_probability": 0.8967582822472335
+      },
+      {
+        "id": "performance-test-04",
+        "gold": "performance",
+        "predicted": "performance",
+        "accepted": true,
+        "max_probability": 0.8883968768754711
+      },
+      {
+        "id": "acces-test-01",
+        "gold": "acces",
+        "predicted": "acces",
+        "accepted": true,
+        "max_probability": 0.8731133996583939
+      },
+      {
+        "id": "acces-test-02",
+        "gold": "acces",
+        "predicted": "acces",
+        "accepted": true,
+        "max_probability": 0.7005228884302043
+      },
+      {
+        "id": "acces-test-03",
+        "gold": "acces",
+        "predicted": "acces",
+        "accepted": true,
+        "max_probability": 0.8037356960668599
+      },
+      {
+        "id": "acces-test-04",
+        "gold": "acces",
+        "predicted": "acces",
+        "accepted": true,
+        "max_probability": 0.8436915782318878
+      }
+    ]
+  },
+  "adapted": {
+    "count": 12,
+    "labels": [
+      "acces",
+      "deploiement",
+      "performance"
+    ],
+    "accuracy_argmax": 1.0,
+    "macro_f1_argmax": 1.0,
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        4
+      ]
+    ],
+    "threshold": 0.34,
+    "coverage": 1.0,
+    "selective_accuracy": 1.0,
+    "cases": [
+      {
+        "id": "deploiement-test-01",
+        "gold": "deploiement",
+        "predicted": "deploiement",
+        "accepted": true,
+        "max_probability": 0.8842926060457942
+      },
+      {
+        "id": "deploiement-test-02",
+        "gold": "deploiement",
+        "predicted": "deploiement",
+        "accepted": true,
+        "max_probability": 0.7958663456712772
+      },
+      {
+        "id": "deploiement-test-03",
+        "gold": "deploiement",
+        "predicted": "deploiement",
+        "accepted": true,
+        "max_probability": 0.8223241404267244
+      },
+      {
+        "id": "deploiement-test-04",
+        "gold": "deploiement",
+        "predicted": "deploiement",
+        "accepted": true,
+        "max_probability": 0.8481910308551874
+      },
+      {
+        "id": "performance-test-01",
+        "gold": "performance",
+        "predicted": "performance",
+        "accepted": true,
+        "max_probability": 0.595195506490557
+      },
+      {
+        "id": "performance-test-02",
+        "gold": "performance",
+        "predicted": "performance",
+        "accepted": true,
+        "max_probability": 0.7559301298710092
+      },
+      {
+        "id": "performance-test-03",
+        "gold": "performance",
+        "predicted": "performance",
+        "accepted": true,
+        "max_probability": 0.8975148682090472
+      },
+      {
+        "id": "performance-test-04",
+        "gold": "performance",
+        "predicted": "performance",
+        "accepted": true,
+        "max_probability": 0.889319948385926
+      },
+      {
+        "id": "acces-test-01",
+        "gold": "acces",
+        "predicted": "acces",
+        "accepted": true,
+        "max_probability": 0.8741783321666043
+      },
+      {
+        "id": "acces-test-02",
+        "gold": "acces",
+        "predicted": "acces",
+        "accepted": true,
+        "max_probability": 0.7115696743430736
+      },
+      {
+        "id": "acces-test-03",
+        "gold": "acces",
+        "predicted": "acces",
+        "accepted": true,
+        "max_probability": 0.8123743552643028
+      },
+      {
+        "id": "acces-test-04",
+        "gold": "acces",
+        "predicted": "acces",
+        "accepted": true,
+        "max_probability": 0.8455226479578142
+      }
+    ]
+  },
+  "vocabulary_unchanged": true,
+  "head_weights_changed": true,
+  "method": "continued linear-head training, frozen TF-IDF; not LLM LoRA"
+}

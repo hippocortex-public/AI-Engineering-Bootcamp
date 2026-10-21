@@ -1,0 +1,21 @@
+{
+  "case_ids": [
+    "c01",
+    "c02",
+    "c03",
+    "c04",
+    "c05",
+    "c06",
+    "c07",
+    "c08",
+    "c09",
+    "c10",
+    "c11",
+    "c12"
+  ],
+  "repeats": 3,
+  "mode": "synthetic_sequential",
+  "concurrency": 1,
+  "warmup": "none; fabricated fixture",
+  "timing": "all terminal attempts; human wait separate"
+}

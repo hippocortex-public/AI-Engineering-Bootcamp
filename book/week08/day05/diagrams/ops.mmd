@@ -1,0 +1,7 @@
+flowchart TD
+ A["Configuration et dataset"] --> B["Mesures et rapports"]
+ B --> C["Revue de risque"]
+ C --> D["Approbation liée au hash"]
+ D --> E{"Configuration et date valides ?"}
+ E -->|oui| F["Décision locale"]
+ E -->|non| G["Refus explicite"]

@@ -1,0 +1,9 @@
+flowchart TD
+ A["Qualité et cas critiques"] --> F["Décision restrictive"]
+ B["Performance et erreurs"] --> F
+ C["Coût utile"] --> F
+ D["Gouvernance"] --> F
+ E["Permissions"] --> F
+ F --> G{"Tous les contrôles passent ?"}
+ G -->|oui| H["Acceptation locale documentée"]
+ G -->|non| I["Refus et raisons"]

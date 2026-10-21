@@ -1,0 +1,150 @@
+[
+  {
+    "id": "e1",
+    "text": "INC-204 concerne Paiement API en prod. La latence est de 1,5 s et le service retourne HTTP 503. Kafka accumule des événements. Contact : alice@example.invalid.",
+    "expected": {
+      "ticket_id": "INC-204",
+      "environment": "prod",
+      "http_status": 503,
+      "duration_ms": "1500"
+    },
+    "summary_reference": "La latence est de 1,5 s et le service retourne HTTP 503. Kafka accumule des événements.",
+    "entities": [
+      {
+        "start": 17,
+        "end": 29,
+        "label": "SERVICE",
+        "text": "Paiement API"
+      },
+      {
+        "start": 33,
+        "end": 37,
+        "label": "ENV",
+        "text": "prod"
+      },
+      {
+        "start": 96,
+        "end": 101,
+        "label": "TECH",
+        "text": "Kafka"
+      },
+      {
+        "start": 137,
+        "end": 158,
+        "label": "EMAIL",
+        "text": "alice@example.invalid"
+      }
+    ],
+    "expected_status": {
+      "ticket_id": "present",
+      "environment": "present",
+      "http_status": "present",
+      "duration_ms": "present"
+    }
+  },
+  {
+    "id": "e2",
+    "text": "INC-305 concerne Catalogue API en recette. Redis ralentit les lectures avec une latence de 250 ms. Le correctif sera vérifié dans PostgreSQL.",
+    "expected": {
+      "ticket_id": "INC-305",
+      "environment": "recette",
+      "http_status": null,
+      "duration_ms": "250"
+    },
+    "summary_reference": "Redis ralentit les lectures avec une latence de 250 ms.",
+    "entities": [
+      {
+        "start": 17,
+        "end": 30,
+        "label": "SERVICE",
+        "text": "Catalogue API"
+      },
+      {
+        "start": 34,
+        "end": 41,
+        "label": "ENV",
+        "text": "recette"
+      },
+      {
+        "start": 43,
+        "end": 48,
+        "label": "TECH",
+        "text": "Redis"
+      },
+      {
+        "start": 130,
+        "end": 140,
+        "label": "TECH",
+        "text": "PostgreSQL"
+      }
+    ],
+    "expected_status": {
+      "ticket_id": "present",
+      "environment": "present",
+      "http_status": "missing",
+      "duration_ms": "present"
+    }
+  },
+  {
+    "id": "e3",
+    "text": "INC-406 concerne Paiement API en production. Le compte reçoit HTTP 401. Le jeton a expiré. Ne pas modifier les permissions sans validation.",
+    "expected": {
+      "ticket_id": "INC-406",
+      "environment": "prod",
+      "http_status": 401,
+      "duration_ms": null
+    },
+    "summary_reference": "Le compte reçoit HTTP 401. Le jeton a expiré.",
+    "entities": [
+      {
+        "start": 17,
+        "end": 29,
+        "label": "SERVICE",
+        "text": "Paiement API"
+      },
+      {
+        "start": 33,
+        "end": 43,
+        "label": "ENV",
+        "text": "production"
+      }
+    ],
+    "expected_status": {
+      "ticket_id": "present",
+      "environment": "present",
+      "http_status": "present",
+      "duration_ms": "missing"
+    }
+  },
+  {
+    "id": "e4",
+    "text": "INC-507 concerne Catalogue API en dev. Le rapport compare HTTP 401 et HTTP 503. La latence est de 100 ms puis la latence de 200 ms.",
+    "expected": {
+      "ticket_id": "INC-507",
+      "environment": "dev",
+      "http_status": null,
+      "duration_ms": null
+    },
+    "summary_reference": "Le rapport compare HTTP 401 et HTTP 503.",
+    "entities": [
+      {
+        "start": 17,
+        "end": 30,
+        "label": "SERVICE",
+        "text": "Catalogue API"
+      },
+      {
+        "start": 34,
+        "end": 37,
+        "label": "ENV",
+        "text": "dev"
+      }
+    ],
+    "expected_status": {
+      "ticket_id": "present",
+      "environment": "present",
+      "http_status": "ambiguous",
+      "duration_ms": "ambiguous"
+    }
+  }
+]

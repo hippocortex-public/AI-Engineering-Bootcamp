@@ -1,0 +1,7 @@
+{
+  "event_id": "evt-day05",
+  "schema_version": 1,
+  "type": "support.requested",
+  "ticket_id": "T-001",
+  "text": "Je souhaite comprendre ma facture"
+}

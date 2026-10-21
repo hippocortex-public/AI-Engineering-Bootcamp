@@ -1,0 +1,11 @@
+{
+  "version": "candidate",
+  "model": "fake-model-candidate",
+  "prompt": "support-v1",
+  "tools": [
+    "read_ticket",
+    "publish_draft"
+  ],
+  "rubric": "J1 1.0",
+  "data": "synthetic only"
+}

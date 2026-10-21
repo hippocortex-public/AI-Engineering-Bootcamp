@@ -1,0 +1,106 @@
+{
+  "predictions": [
+    {
+      "id": "e1",
+      "entities": [
+        {
+          "start": 17,
+          "end": 29,
+          "text": "Paiement API",
+          "label": "SERVICE"
+        },
+        {
+          "start": 33,
+          "end": 37,
+          "text": "prod",
+          "label": "ENV"
+        },
+        {
+          "start": 96,
+          "end": 101,
+          "text": "Kafka",
+          "label": "TECH"
+        },
+        {
+          "start": 137,
+          "end": 158,
+          "text": "alice@example.invalid",
+          "label": "EMAIL"
+        }
+      ]
+    },
+    {
+      "id": "e2",
+      "entities": [
+        {
+          "start": 17,
+          "end": 30,
+          "text": "Catalogue API",
+          "label": "SERVICE"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "text": "recette",
+          "label": "ENV"
+        },
+        {
+          "start": 43,
+          "end": 48,
+          "text": "Redis",
+          "label": "TECH"
+        },
+        {
+          "start": 130,
+          "end": 140,
+          "text": "PostgreSQL",
+          "label": "TECH"
+        }
+      ]
+    },
+    {
+      "id": "e3",
+      "entities": [
+        {
+          "start": 17,
+          "end": 29,
+          "text": "Paiement API",
+          "label": "SERVICE"
+        },
+        {
+          "start": 33,
+          "end": 43,
+          "text": "production",
+          "label": "ENV"
+        }
+      ]
+    },
+    {
+      "id": "e4",
+      "entities": [
+        {
+          "start": 17,
+          "end": 30,
+          "text": "Catalogue API",
+          "label": "SERVICE"
+        },
+        {
+          "start": 34,
+          "end": 37,
+          "text": "dev",
+          "label": "ENV"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "true_positive": 12,
+    "false_positive": 0,
+    "false_negative": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "protocol": "exact document/start/end/label spans"
+  },
+  "method": "gazetteer + email regex, not learned NER"
+}

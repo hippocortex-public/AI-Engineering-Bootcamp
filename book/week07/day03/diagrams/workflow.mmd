@@ -1,0 +1,6 @@
+flowchart TD
+  A["Événement reçu"] --> B{"Identifiant connu ?"}
+  B -->|non| C["Commit puis 202"]
+  B -->|oui| D{"Contenu identique ?"}
+  D -->|oui| E["Job existant et 200"]
+  D -->|non| F["Conflit 409"]

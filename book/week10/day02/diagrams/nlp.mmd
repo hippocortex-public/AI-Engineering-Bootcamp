@@ -1,0 +1,7 @@
+flowchart TD
+ A["Texte source"] --> B["Occurrences et offsets"]
+ B --> C["Normalisation des valeurs"]
+ C --> D{"Valeurs distinctes"}
+ D -->|aucune| E["Missing"]
+ D -->|une| F["Present"]
+ D -->|plusieurs| G["Ambiguous et revue"]

@@ -1,0 +1,118 @@
+{
+  "source_filename": "week08_day01_evaluation_bootcamp.zip",
+  "source_archive_sha256": "7659a5264f47ff63ac9008178431c337997ddd8379cc35716a0f4eab734ad70b",
+  "preserved_files": [
+    {
+      "path": "book/week08/day01/README.md",
+      "sha256": "4a5d863e5dd00fb0a3cb1566950f739a756cd5fe5710d0162a261cc10f97c39b"
+    },
+    {
+      "path": "book/week08/day01/assets/baseline.jsonl",
+      "sha256": "6ee5654a817e2dae62f384ca9a27739631d55753c53cd20c33b08d47a395527d"
+    },
+    {
+      "path": "book/week08/day01/assets/baseline_report.json",
+      "sha256": "0c56aedfd5dc914475be949bac3415d65a2c60528dd56c94fa0a59b6f16a49a0"
+    },
+    {
+      "path": "book/week08/day01/assets/candidate.jsonl",
+      "sha256": "dd2f6476e57b9304458bc70565165401165f399f3bd668aead17c332a5ad2167"
+    },
+    {
+      "path": "book/week08/day01/assets/candidate_report.json",
+      "sha256": "1e5782e7b6345d831370d9c02d74144f53524ee6422f284de792dfb30e85bb1b"
+    },
+    {
+      "path": "book/week08/day01/assets/comparison_report.json",
+      "sha256": "ae48cbb200d1f71ad8197d44137472972edc7e0094ab2b2deb98bc097e9585b8"
+    },
+    {
+      "path": "book/week08/day01/assets/dataset.jsonl",
+      "sha256": "48ddc1b79898a58f34b5f95189ee8222cd75851453b742e5393dc2927a0eea6f"
+    },
+    {
+      "path": "book/week08/day01/assets/notebook_lab.md",
+      "sha256": "89d368d05ef0900f67867f62c080b0a6a6a81dd5f18417229322f8f9d9caca5c"
+    },
+    {
+      "path": "book/week08/day01/challenge.md",
+      "sha256": "f75369586269891a5fcb23f525acac4d47166b09147e918a30ad033933403868"
+    },
+    {
+      "path": "book/week08/day01/chapter.md",
+      "sha256": "37047a884d1963b1d2a6cd421e0a3382a1be8181551c36d714dcd66cc0073663"
+    },
+    {
+      "path": "book/week08/day01/corriges/challenge_solution.md",
+      "sha256": "99a5d735c412da4ac0cd0f982ab007619ab768d407eb1470134b1f9bd5d2037b"
+    },
+    {
+      "path": "book/week08/day01/corriges/exercises_solution.md",
+      "sha256": "7e87734cf0406414a4e94f2804945600bd4585ee58d4c16f81bb29143e8eaa17"
+    },
+    {
+      "path": "book/week08/day01/corriges/interview_solution.md",
+      "sha256": "278d8fd6ebe9257f515c46294fe828158ccadaaf91135b01014e209a5fb83d7c"
+    },
+    {
+      "path": "book/week08/day01/corriges/review.md",
+      "sha256": "67baf33e30f2d29f216ea5c325eedc983d9b1485a7a294b19b76831f10db0fb2"
+    },
+    {
+      "path": "book/week08/day01/diagrams/evaluation.mmd",
+      "sha256": "2f32a98312e0d0d7ca6748d541ffb5c0da58159899fcf5d160f04797e04611ff"
+    },
+    {
+      "path": "book/week08/day01/exercises.md",
+      "sha256": "ae5aa357c3c9d54edb86e165c434a28753088cb1c88d30c293a6c46bca70f82b"
+    },
+    {
+      "path": "book/week08/day01/interview.md",
+      "sha256": "982918b2ee6f175fec1901a15319e4f7d3224e3cc7bae58f6930519354c727be"
+    },
+    {
+      "path": "book/week08/day01/labs/README.md",
+      "sha256": "12952d820ab9f4da7ab6e099261dfbe04ce12209571b1e28486b291bde3ae788"
+    },
+    {
+      "path": "book/week08/day01/labs/evaluation_lab/__init__.py",
+      "sha256": "94852783b252802742a06d3d2535b758bb010315661619ee4c64f8a0d56798bb"
+    },
+    {
+      "path": "book/week08/day01/labs/evaluation_lab/__main__.py",
+      "sha256": "5910df3740a4925faa204b7fcd46d8d18a369f2fdb5957c0c4c9c367c9e3f701"
+    },
+    {
+      "path": "book/week08/day01/labs/evaluation_lab/core.py",
+      "sha256": "e7f51057f44e7f6477256bbeb5da86a46fc59fcf28efbaa275aa953227182cc8"
+    },
+    {
+      "path": "book/week08/day01/labs/evaluation_lab/tests/test_core.py",
+      "sha256": "830c5e9a68cc0f4aae769c8cecc5b29da56b93a73132e289158106cf0782c5a4"
+    },
+    {
+      "path": "book/week08/day01/labs/generate_notebooks.py",
+      "sha256": "29382a1e1edf2fb6c9a3f0c4bf3caa1368f738b53338d6b4e97c78a1e8273160"
+    },
+    {
+      "path": "book/week08/day01/labs/requirements-notebooks.txt",
+      "sha256": "4e8176fa1d1e60ec677b1912ae1cb27c71c19f2948d3dfb4f06cf2b908ea887b"
+    },
+    {
+      "path": "book/week08/day01/learning_objectives.md",
+      "sha256": "fe2d1f394c100e417cdc5f7ea12c7c59d2dd8735e59a2c9cde526c51904f1430"
+    },
+    {
+      "path": "book/week08/day01/references.md",
+      "sha256": "45668416aeb20a1c70cd4ed15834ffdfd48a6a314227fe9f03172a85fb83d0ae"
+    },
+    {
+      "path": "notebooks/week08/S8_J1_evaluation.ipynb",
+      "sha256": "1f519f235bcfe136908211f192fbfa0b3dce651127b3ed3c472935224d1d368e"
+    },
+    {
+      "path": "notebooks/week08/teacher/S8_J1_evaluation_teacher.ipynb",
+      "sha256": "77f8a28d40f1b473afa912ae1a34e52214fa21019b0a396c03cc5c1c4824f7c2"
+    }
+  ]
+}

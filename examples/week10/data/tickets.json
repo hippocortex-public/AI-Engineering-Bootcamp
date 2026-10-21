@@ -1,0 +1,506 @@
+[
+  {
+    "id": "deploiement-train-01",
+    "group_id": "deploiement-train-01",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Le déploiement échoue après le changement de version du conteneur."
+  },
+  {
+    "id": "deploiement-train-02",
+    "group_id": "deploiement-train-02",
+    "split": "train",
+    "label": "deploiement",
+    "text": "La nouvelle image Docker ne démarre pas sur le cluster."
+  },
+  {
+    "id": "deploiement-train-03",
+    "group_id": "deploiement-train-03",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Le pod reste en attente après la release du service."
+  },
+  {
+    "id": "deploiement-train-04",
+    "group_id": "deploiement-train-04",
+    "split": "train",
+    "label": "deploiement",
+    "text": "La configuration du déploiement contient une variable absente."
+  },
+  {
+    "id": "deploiement-train-05",
+    "group_id": "deploiement-train-05",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Le pipeline de livraison ne publie pas la bonne image."
+  },
+  {
+    "id": "deploiement-train-06",
+    "group_id": "deploiement-train-06",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Le démarrage du conteneur échoue avec la dernière version."
+  },
+  {
+    "id": "deploiement-train-07",
+    "group_id": "deploiement-train-07",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Une migration bloque la mise en service de la release."
+  },
+  {
+    "id": "deploiement-train-08",
+    "group_id": "deploiement-train-08",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Le rollout Kubernetes ne termine pas le démarrage des pods."
+  },
+  {
+    "id": "deploiement-train-09",
+    "group_id": "deploiement-train-09",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Le manifeste du conteneur indique un mauvais port au déploiement."
+  },
+  {
+    "id": "deploiement-train-10",
+    "group_id": "deploiement-train-10",
+    "split": "train",
+    "label": "deploiement",
+    "text": "La version livrée ne correspond pas à celle du pipeline."
+  },
+  {
+    "id": "deploiement-train-11",
+    "group_id": "deploiement-train-11",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Une erreur de configuration empêche la nouvelle release de démarrer."
+  },
+  {
+    "id": "deploiement-train-12",
+    "group_id": "deploiement-train-12",
+    "split": "train",
+    "label": "deploiement",
+    "text": "Le retour à une image précédente débloque le déploiement."
+  },
+  {
+    "id": "deploiement-adapt-01",
+    "group_id": "deploiement-adapt-01",
+    "split": "adapt",
+    "label": "deploiement",
+    "text": "La release démarre avec une image incorrecte et provoque une latence secondaire."
+  },
+  {
+    "id": "deploiement-adapt-02",
+    "group_id": "deploiement-adapt-02",
+    "split": "adapt",
+    "label": "deploiement",
+    "text": "Le pipeline échoue sur la version du conteneur malgré un jeton valide."
+  },
+  {
+    "id": "deploiement-adapt-03",
+    "group_id": "deploiement-adapt-03",
+    "split": "adapt",
+    "label": "deploiement",
+    "text": "Le rollout reste bloqué pendant le démarrage de la nouvelle image."
+  },
+  {
+    "id": "deploiement-adapt-04",
+    "group_id": "deploiement-adapt-04",
+    "split": "adapt",
+    "label": "deploiement",
+    "text": "La configuration de la release casse le port du service après livraison."
+  },
+  {
+    "id": "deploiement-validation-01",
+    "group_id": "deploiement-validation-01",
+    "split": "validation",
+    "label": "deploiement",
+    "text": "Après livraison le pod refuse de démarrer avec la nouvelle image."
+  },
+  {
+    "id": "deploiement-validation-02",
+    "group_id": "deploiement-validation-02",
+    "split": "validation",
+    "label": "deploiement",
+    "text": "Le pipeline prépare une release dont la configuration est incomplète."
+  },
+  {
+    "id": "deploiement-validation-03",
+    "group_id": "deploiement-validation-03",
+    "split": "validation",
+    "label": "deploiement",
+    "text": "Un changement de version empêche le démarrage du conteneur Docker."
+  },
+  {
+    "id": "deploiement-validation-04",
+    "group_id": "deploiement-validation-04",
+    "split": "validation",
+    "label": "deploiement",
+    "text": "Le manifeste de déploiement expose un port incorrect."
+  },
+  {
+    "id": "deploiement-test-01",
+    "group_id": "deploiement-test-01",
+    "split": "test",
+    "label": "deploiement",
+    "text": "La mise en service reste bloquée après la publication de la nouvelle image."
+  },
+  {
+    "id": "deploiement-test-02",
+    "group_id": "deploiement-test-02",
+    "split": "test",
+    "label": "deploiement",
+    "text": "Le rollout du cluster échoue pendant le démarrage des pods."
+  },
+  {
+    "id": "deploiement-test-03",
+    "group_id": "deploiement-test-03",
+    "split": "test",
+    "label": "deploiement",
+    "text": "Une variable de configuration manque dans la release livrée."
+  },
+  {
+    "id": "deploiement-test-04",
+    "group_id": "deploiement-test-04",
+    "split": "test",
+    "label": "deploiement",
+    "text": "Le pipeline fournit une version de conteneur qui ne démarre pas."
+  },
+  {
+    "id": "performance-train-01",
+    "group_id": "performance-train-01",
+    "split": "train",
+    "label": "performance",
+    "text": "La latence augmente fortement lorsque le débit des requêtes progresse."
+  },
+  {
+    "id": "performance-train-02",
+    "group_id": "performance-train-02",
+    "split": "train",
+    "label": "performance",
+    "text": "Le service devient lent sous la charge avec plusieurs timeouts."
+  },
+  {
+    "id": "performance-train-03",
+    "group_id": "performance-train-03",
+    "split": "train",
+    "label": "performance",
+    "text": "Le processeur est saturé pendant les appels de lecture."
+  },
+  {
+    "id": "performance-train-04",
+    "group_id": "performance-train-04",
+    "split": "train",
+    "label": "performance",
+    "text": "Le pool de connexions attend et provoque une lenteur des réponses."
+  },
+  {
+    "id": "performance-train-05",
+    "group_id": "performance-train-05",
+    "split": "train",
+    "label": "performance",
+    "text": "Le temps de réponse dépasse deux secondes sous forte charge."
+  },
+  {
+    "id": "performance-train-06",
+    "group_id": "performance-train-06",
+    "split": "train",
+    "label": "performance",
+    "text": "Un timeout survient lorsque les requêtes saturent le service."
+  },
+  {
+    "id": "performance-train-07",
+    "group_id": "performance-train-07",
+    "split": "train",
+    "label": "performance",
+    "text": "La mémoire du processus augmente et ralentit les traitements."
+  },
+  {
+    "id": "performance-train-08",
+    "group_id": "performance-train-08",
+    "split": "train",
+    "label": "performance",
+    "text": "Le débit chute pendant la saturation du cache."
+  },
+  {
+    "id": "performance-train-09",
+    "group_id": "performance-train-09",
+    "split": "train",
+    "label": "performance",
+    "text": "Une requête lente bloque les connexions de la base."
+  },
+  {
+    "id": "performance-train-10",
+    "group_id": "performance-train-10",
+    "split": "train",
+    "label": "performance",
+    "text": "Le goulot de traitement limite le débit disponible."
+  },
+  {
+    "id": "performance-train-11",
+    "group_id": "performance-train-11",
+    "split": "train",
+    "label": "performance",
+    "text": "Les réponses sont lentes lorsque le processeur manque de capacité."
+  },
+  {
+    "id": "performance-train-12",
+    "group_id": "performance-train-12",
+    "split": "train",
+    "label": "performance",
+    "text": "La durée des appels augmente sans erreur de droits."
+  },
+  {
+    "id": "performance-adapt-01",
+    "group_id": "performance-adapt-01",
+    "split": "adapt",
+    "label": "performance",
+    "text": "Le débit chute après le déploiement mais le service fonctionne et sa latence augmente."
+  },
+  {
+    "id": "performance-adapt-02",
+    "group_id": "performance-adapt-02",
+    "split": "adapt",
+    "label": "performance",
+    "text": "La saturation du pool ralentit les connexions malgré une authentification correcte."
+  },
+  {
+    "id": "performance-adapt-03",
+    "group_id": "performance-adapt-03",
+    "split": "adapt",
+    "label": "performance",
+    "text": "Le goulot du traitement provoque un timeout sous charge."
+  },
+  {
+    "id": "performance-adapt-04",
+    "group_id": "performance-adapt-04",
+    "split": "adapt",
+    "label": "performance",
+    "text": "Le processeur saturé augmente la durée des requêtes et la lenteur."
+  },
+  {
+    "id": "performance-validation-01",
+    "group_id": "performance-validation-01",
+    "split": "validation",
+    "label": "performance",
+    "text": "Sous forte charge les réponses deviennent lentes et le pool attend."
+  },
+  {
+    "id": "performance-validation-02",
+    "group_id": "performance-validation-02",
+    "split": "validation",
+    "label": "performance",
+    "text": "Le cache saturé limite le débit et la latence augmente."
+  },
+  {
+    "id": "performance-validation-03",
+    "group_id": "performance-validation-03",
+    "split": "validation",
+    "label": "performance",
+    "text": "Les requêtes accumulent des timeouts pendant la saturation CPU."
+  },
+  {
+    "id": "performance-validation-04",
+    "group_id": "performance-validation-04",
+    "split": "validation",
+    "label": "performance",
+    "text": "Le temps de réponse se dégrade avec le volume des appels."
+  },
+  {
+    "id": "performance-test-01",
+    "group_id": "performance-test-01",
+    "split": "test",
+    "label": "performance",
+    "text": "Le pool attend une connexion et les traitements deviennent très lents."
+  },
+  {
+    "id": "performance-test-02",
+    "group_id": "performance-test-02",
+    "split": "test",
+    "label": "performance",
+    "text": "Le service reçoit davantage de requêtes et sa latence augmente."
+  },
+  {
+    "id": "performance-test-03",
+    "group_id": "performance-test-03",
+    "split": "test",
+    "label": "performance",
+    "text": "La durée des appels dépasse le seuil lorsque le processeur sature."
+  },
+  {
+    "id": "performance-test-04",
+    "group_id": "performance-test-04",
+    "split": "test",
+    "label": "performance",
+    "text": "Le débit disponible chute avec les timeouts sous charge."
+  },
+  {
+    "id": "acces-train-01",
+    "group_id": "acces-train-01",
+    "split": "train",
+    "label": "acces",
+    "text": "Le jeton est expiré et le service retourne une erreur HTTP 401."
+  },
+  {
+    "id": "acces-train-02",
+    "group_id": "acces-train-02",
+    "split": "train",
+    "label": "acces",
+    "text": "Un utilisateur reçoit un refus HTTP 403 pour manque de droits."
+  },
+  {
+    "id": "acces-train-03",
+    "group_id": "acces-train-03",
+    "split": "train",
+    "label": "acces",
+    "text": "La connexion est refusée car le rôle ne permet pas cette action."
+  },
+  {
+    "id": "acces-train-04",
+    "group_id": "acces-train-04",
+    "split": "train",
+    "label": "acces",
+    "text": "Le token de connexion ne contient pas le scope nécessaire."
+  },
+  {
+    "id": "acces-train-05",
+    "group_id": "acces-train-05",
+    "split": "train",
+    "label": "acces",
+    "text": "Les permissions empêchent la lecture du dossier demandé."
+  },
+  {
+    "id": "acces-train-06",
+    "group_id": "acces-train-06",
+    "split": "train",
+    "label": "acces",
+    "text": "Le fournisseur refuse le jeton pendant une authentification."
+  },
+  {
+    "id": "acces-train-07",
+    "group_id": "acces-train-07",
+    "split": "train",
+    "label": "acces",
+    "text": "Un rôle absent provoque une interdiction de consulter la ressource."
+  },
+  {
+    "id": "acces-train-08",
+    "group_id": "acces-train-08",
+    "split": "train",
+    "label": "acces",
+    "text": "La clé de connexion est invalide et les accès sont refusés."
+  },
+  {
+    "id": "acces-train-09",
+    "group_id": "acces-train-09",
+    "split": "train",
+    "label": "acces",
+    "text": "Une erreur RBAC interdit cette opération à cet utilisateur."
+  },
+  {
+    "id": "acces-train-10",
+    "group_id": "acces-train-10",
+    "split": "train",
+    "label": "acces",
+    "text": "Le scope demandé ne correspond pas aux permissions du compte."
+  },
+  {
+    "id": "acces-train-11",
+    "group_id": "acces-train-11",
+    "split": "train",
+    "label": "acces",
+    "text": "La session expirée empêche une authentification correcte."
+  },
+  {
+    "id": "acces-train-12",
+    "group_id": "acces-train-12",
+    "split": "train",
+    "label": "acces",
+    "text": "Le compte ne possède pas les droits de lecture requis."
+  },
+  {
+    "id": "acces-adapt-01",
+    "group_id": "acces-adapt-01",
+    "split": "adapt",
+    "label": "acces",
+    "text": "La release fonctionne mais le jeton expiré refuse la connexion utilisateur."
+  },
+  {
+    "id": "acces-adapt-02",
+    "group_id": "acces-adapt-02",
+    "split": "adapt",
+    "label": "acces",
+    "text": "Le service répond vite mais retourne un refus HTTP 403 lié au rôle."
+  },
+  {
+    "id": "acces-adapt-03",
+    "group_id": "acces-adapt-03",
+    "split": "adapt",
+    "label": "acces",
+    "text": "La règle RBAC interdit le dossier malgré un déploiement réussi."
+  },
+  {
+    "id": "acces-adapt-04",
+    "group_id": "acces-adapt-04",
+    "split": "adapt",
+    "label": "acces",
+    "text": "Une permission absente rend le scope du token insuffisant."
+  },
+  {
+    "id": "acces-validation-01",
+    "group_id": "acces-validation-01",
+    "split": "validation",
+    "label": "acces",
+    "text": "Le compte reçoit HTTP 401 parce que son token a expiré."
+  },
+  {
+    "id": "acces-validation-02",
+    "group_id": "acces-validation-02",
+    "split": "validation",
+    "label": "acces",
+    "text": "Le rôle utilisateur ne possède pas la permission de lecture."
+  },
+  {
+    "id": "acces-validation-03",
+    "group_id": "acces-validation-03",
+    "split": "validation",
+    "label": "acces",
+    "text": "La règle RBAC bloque la consultation du dossier."
+  },
+  {
+    "id": "acces-validation-04",
+    "group_id": "acces-validation-04",
+    "split": "validation",
+    "label": "acces",
+    "text": "Une authentification invalide produit un refus de connexion."
+  },
+  {
+    "id": "acces-test-01",
+    "group_id": "acces-test-01",
+    "split": "test",
+    "label": "acces",
+    "text": "Le jeton de session a expiré et une connexion est refusée."
+  },
+  {
+    "id": "acces-test-02",
+    "group_id": "acces-test-02",
+    "split": "test",
+    "label": "acces",
+    "text": "La ressource reste interdite au compte dont le scope manque."
+  },
+  {
+    "id": "acces-test-03",
+    "group_id": "acces-test-03",
+    "split": "test",
+    "label": "acces",
+    "text": "Le rôle du compte provoque un refus HTTP 403 sur le dossier."
+  },
+  {
+    "id": "acces-test-04",
+    "group_id": "acces-test-04",
+    "split": "test",
+    "label": "acces",
+    "text": "Les permissions ne permettent pas cette lecture malgré un token valide."
+  }
+]

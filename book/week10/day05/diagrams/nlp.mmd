@@ -1,0 +1,7 @@
+flowchart TD
+ A["Train : représentation et tête"] --> B["Baseline conservée"]
+ B --> C["Clone de la tête"]
+ D["Adapt : transform seulement"] --> C
+ C --> E["Validation des epochs"]
+ E --> F["Test après choix"]
+ F --> G["Artefact et limites"]
